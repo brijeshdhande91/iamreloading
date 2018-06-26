@@ -6,7 +6,7 @@ var mysql_connection = mysql.createPool({
         connectionLimit : 100,
         waitForConnections : true,
         queueLimit :0,
-        host     : 'mysql://mysql:3306/',
+        host     : 'mysql.iamreloading.svc',
         user     : 'dbiamreloading',
         password : 'iamreloading',
         database : 'iamreloadingdb',
