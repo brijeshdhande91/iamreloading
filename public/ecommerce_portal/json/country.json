@@ -1,0 +1,14 @@
+var countryList = {
+  "countries": [
+    {
+      "name": "India",
+      "code": "IN",
+	  "isd": "91"
+    },
+    {
+      "name": "USA",
+      "code": "US",
+	  "isd": "1"
+    }
+  ]
+}

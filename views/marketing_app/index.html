@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	   <!--  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/content.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/datepicker.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.4.custom.css">
+		<style>
+		  .dbrd {
+			border-style: solid;
+		  }
+		</style>
+	   <!--  <script src="js/jquery-1.10.2.js"></script> -->
+		<script src="js/underscore.js"></script>
+		<script src="js/backbone.js"></script>
+	  <!--   <script src="js/bootstrap.min.js"></script> -->
+		<script src="js/jquery-ui-1.10.4.custom.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/form_validation.js"></script>
+
+  </head>
+  <body>
+	<div class="center-950px-block  container_WDT960PX PADDL0 no-padding-left no-padding-right page ">	
+		<div class="rootDiv panel " style=" background-color: transparent;" >		
+		<!-- START - HEADER SECTION -->
+			<section class="fixed_header ">
+				<div class="mcenter">
+					<div class="header-logo" >
+						<div class="col-md-6 col-lg-6 col-sm-6 col-xs-8  mfont_14px mtext-center">
+							<!-- <a href="#">
+								<span class="logo-imgs"></span>
+							</a> -->
+							<img class="logo-imgs" src="images/logo_icon.png" />
+						</div>	
+						<div>
+								<p class="user_name">welcome&nbsp;<b><span>Shahid</span></b>
+							</p>
+							<div id="nav-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							<nav id="nav-mobile">
+								<ul id="menu" class="index_menu_right">
+									<li><a href="#" id="" class="index_menu_a">Menu - 1</a></li>
+									<li><a href="#" id="" class="index_menu_a">Menu - 2</a></li>
+									<li><a href="#" id="" class="index_menu_a">Menu - 3</a></li>
+									<li><a href="#" id="" class="index_menu_a">Menu - 4</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>	
+				</div>
+			</section>
+		<!-- END - HEADER SECTION -->
+			<div class="main_container">
+				<div class="content_section ">
+					<div class="row animated" id="operator">					
+						<div class="col-md-12 col-sm-12 row PDT20PX MRGB25PX">
+							<!-- <p class="col-md-6  col-sm-6">Username</p> -->
+							<span class="col-md-6  col-sm-6 PADDD0PX">	
+								<input type="text" placeholder="Enter Username"/>
+								<span class="glyphicon glyphicon-user signup_model_icon "></span>
+							</span>	
+						</div>
+						<div class="col-md-12 col-sm-12 row">
+							<!-- <p class="col-md-6  col-sm-6" >Password</p> -->
+							<span class="col-md-6  col-sm-6 PADDD0PX">	
+								<input type="password" placeholder="Enter Password "/>
+								<span class="glyphicon glyphicon-lock signup_model_icon "></span>
+							</span>
+						</div>
+						<div class="text-center">
+							<a href="home.html" class=""><input type="button" value="Sign In" class="button" id="sign-in"/></a>
+						</div>
+					</div>							
+				</div>
+			</div>			
+		</div>
+	</div>
+	<!-- START -- Footer Secion -->
+		
+	<div class="footer">	
+		<div class="footer_container">						
+			<div>
+				<p class="copy_right"><a href="http://saptalabs.com/" target="_blank">&nbsp;Insecticides (India) Ltd&nbsp;</a><span> &#169;&nbsp; <script type"text/javascript">document.write(new Date().getFullYear());</script></span></p>
+				<div class="icons">
+					<ul>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="facbk flipper"></span></a></li>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="ld flipper"></span></a></li>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="tw flipper"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+			<!-- END -- Footer Secion -->
+    <script>
+		(function($){
+			(function fadeNext(collection){
+				collection.eq(0).fadeIn(100, function(){
+					(collection=collection.slice(1)).length 
+					&& fadeNext(collection)
+				});
+			})($('.signup_model_animtn'))
+		})(jQuery)
+	</script>
+	<script>
+		$(document).ready(function(){
+			$("#sign-in").click(function(){
+				$("#fuel").addClass("slideInRight");
+				$("#fuel").removeClass("slideInLeft");
+				<!-- $("#operator").addClass("hidecontent"); -->
+				<!-- $(".content_section")addClass("hidecontent"); -->
+			});
+			$("#previous").click(function(){
+				$("#fuel").removeClass("showcontent slideInRight");
+				$("#operator").removeClass("hidecontent");
+				$("#operator").addClass("slideInLeft");
+			});
+			$("#button").click(function(){
+				location.reload();
+			});
+		});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("#nav-mobile").html($("#nav-main").html());
+		$("#nav-trigger span").click(function(){
+			if ($("nav#nav-mobile ul").hasClass("expanded")) {
+				$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+				$(this).removeClass("open");
+			} else {
+				$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+				$(this).addClass("open");
+			}
+		});
+	});
+	</script>  
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title></title>
+		<link rel="icon" href="images/favicon.ico" type="image/png" />
+		<!-- Bootstrap -->
+		<link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
+		<!-- Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,300' rel='stylesheet' type='text/css' />
+		<link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<!-- Main Styles -->
+		
+		<script type="text/javascript" src="javascripts/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+		<script type="text/javascript" src="javascripts/script.js"></script>
+	</head>
+	<body ng-app="portfolio" ng-controller="portfolio_ctrl">
+	<style type="text/css">
+		.arrw{
+		    position: absolute;
+		    right: 16px;
+		    background: white;
+		    top: -10px;
+		    /*left: 2px;*/
+		    border-radius: 10px;
+		}
+		.welcome_name{
+	      font-size: 14px;
+	      padding: 17px 6px; 
+	      color: #767676;
+	      font-weight: 400;
+	   	}
+		.header_dropdown{
+		  	position: absolute;
+		    z-index: 9999;
+		    top: 12px;
+		    left: 285px;
+		}
+		.header_dropdown .dropdown-menu>li>a:focus, .header_dropdown .dropdown-menu>li>a:hover{
+		    color: #b81e25; 
+		}
+		.align_right{ float: right; position: relative;}
+		.up_label{
+		  top:-32px !important;
+		  font-size: 14px !important;
+		}
+		.dropdown-menu {
+			min-width: 280px !important;
+		}
+		@media screen and (-webkit-min-device-pixel-ratio:0) 
+		  { 
+		    .btn { padding: 7px 6px !important; line-height: 1 !important;	}
+		    .arrw{	position: absolute;	right: 16px;	background: white;	top: 5px !important;	border-radius: 10px;}
+		  }
+		  @-moz-document url-prefix() {
+		  	.arrw{ top: -10px;	left: 2px;	}
+		  }
+		  .btn{
+		  	padding: 8px 12px 3px 12px;	line-height: 9px;
+		  }
+	</style>
+	<% include ../portfolio_header.html %>
+	<title>Login</title>
+		<main class="wait">
+			<section class="_login">
+				<div class="login_container">
+					<div class="text-center _PDB43PX">
+						<!-- <img src="images/logo_icon.png" class="logo_icon" /> -->
+					</div>
+					<!-- <div class="card"></div> -->
+					<div class="card">
+						<h1 class="title">DVLA Search</h1>
+						<form action="/uk_dvla_portal/<%=token %>/plate_details" class="form-horizontal" role="form" method='GET' name="form">
+							<div class="input-container">
+								<span class="plate_input">
+									<input type="text" id="plate" name='plate_num' style=" margin: 15px 43px 2px; width: 67% !important;" required/>
+								</span>	
+								<label id="label_top" for="plate" style="left: 70px !important;">YOUR REG</label>
+								<!-- <div class="bar"></div> -->
+							</div>
+							<div class="button-container">
+								<button id="login_submit" type="submit" value="GO" class="go_button ">GO</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

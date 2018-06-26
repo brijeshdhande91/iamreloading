@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<% include marketing_app_layout.html %>	
+  </head>
+  <body>
+  	<input type="hidden" id="refreshed" value="no">	
+  	<% include ../portfolio_header.html %>
+	<div class="center-950px-block  container_WDT960PX PADDL0 no-padding-left no-padding-right page " style="position: fixed; width: 100%; height: 100%;" >	
+		<div class="rootDiv panel " style=" background-color: transparent;" >		
+		<!-- START - HEADER SECTION -->
+			<% include marketing_app_header.html %>
+		<!-- End - HEADER SECTION -->
+			<div  class="main_container " id="fuel ">
+				<div class="home-section slideInRight animated">
+					<div class="icon-division">
+						<a href="/marketing_app/<%=token%>/stock"><img src="../images/icon_1.jpg" /></a>
+					</div>
+					<div class="icon-division">
+						<a href="/marketing_app/<%=token%>/vendor"><img src="../images/icon_2.jpg" /></a>				
+					</div>
+					<div class="icon-division">
+						<a href="/marketing_app/<%=token%>/purchase"><img src="../images/icon_3.png" /></a>			
+					</div>
+					<div class="icon-division">
+						<a href="#"><img src="../images/icon_4.jpg" /></a>			
+					</div>
+					<div class="icon-division">
+						<a href="#"><img src="../images/icon_5.png" /></a>			
+					</div>
+					<div class="icon-division">
+						<a href="#"><img src="../images/icon_6.jpg" /></a>			
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	
+		
+	<div  class="footer ">	
+		<div class="footer_container">						
+			<div>
+				<p class="copy_right"><a href="http://saptalabs.com/" target="_blank">&nbsp;Insecticides (India) Ltd&nbsp;</a><span> &#169;&nbsp; <script type"text/javascript">document.write(new Date().getFullYear());</script></span></p>
+				<div class="icons">
+					<ul>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="facbk flipper"></span></a></li>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="ld flipper"></span></a></li>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="tw flipper"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+    <script>
+		(function($){
+			(function fadeNext(collection){
+				collection.eq(0).fadeIn(100, function(){
+					(collection=collection.slice(1)).length 
+					&& fadeNext(collection)
+				});
+			})($('.signup_model_animtn'))
+		})(jQuery)
+	</script>
+	<script>
+		$(document).ready(function(){
+			$("#sign-in").click(function(){
+				$("#fuel").addClass("showcontent slideInRight");
+				$("#fuel").removeClass("slideInLeft");
+				$("#operator").addClass("hidecontent");
+				<!-- $(".content_section")addClass("hidecontent"); -->
+			});
+			$("#previous").click(function(){
+				$("#fuel").removeClass("showcontent slideInRight");
+				$("#operator").removeClass("hidecontent");
+				$("#operator").addClass("slideInLeft");
+			});
+			$("#submit").click(function(){
+				location.reload();
+			});
+		});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("#nav-mobile").html($("#nav-main").html());
+		$("#nav-trigger span").click(function(){
+			if ($("nav#nav-mobile ul").hasClass("expanded")) {
+				$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+				$(this).removeClass("open");
+			} else {
+				$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+				$(this).addClass("open");
+			}
+		});
+	});
+	</script>  
+</body>
+</html>

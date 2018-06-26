@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<% include layout.html %>
+	</head>
+	<body ng-app="portfolio" ng-controller="portfolio_ctrl">
+	<title>Login</title>
+		<main class="wait">
+			<section class="_login">
+				<div class="login_container">
+					<div class="text-center _PDB43PX">
+						<img src="images/logo_icon.png" class="logo_icon" />
+					</div>
+					<!-- <div class="card"></div> -->
+					<div class="card">
+						<h1 class="title">Login</h1>
+						<form action="/home" class="form-horizontal" role="form" method='POST' name="form">
+							<div class="input-container">
+								<input type="email" id="Username" name='email' required/>
+								<label for="Username">Email</label>
+								<div class="bar"></div>
+							</div>
+							<div class="input-container">
+								<input type="password" id="Password" name='password' required/>
+								<label for="Password">Password</label>
+								<div class="bar"></div>
+							</div>
+							<div class="button-container">
+								<input id="login_submit" type="submit" value="GO" class="go_button " />
+							</div>
+							<div class="footer"><a href="/forgot_password">Forgot your password?</a></div> 
+						</form>
+						<div class = "reg_center portfolio_info forgot">new user?
+							<a href ="/">register</a>
+						</div>	
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

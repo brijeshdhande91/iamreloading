@@ -1,0 +1,360 @@
+<nav id="nh_header" class="navbar navbar-default navbar-static-top" style="z-index:0;">
+				<div class="glass _PAD5">
+				    <div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle navbar-toggle-sidebar collapsed menurem">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<!-- <button type="button" class="navbar-toggle collapsed menurem" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								
+							</button> -->
+							<a class="navbar-brand" href="#">
+								<img src="../images/logo_icon.png" style="position: absolute; top: 5px; width: 50px;" />
+							</a>
+							<!-- <a class="navbar-brand" href="#">
+								Admin
+							</a> -->
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse user_resp_menu" id="bs-example-navbar-collapse-1">      
+							<!-- <form class="navbar-form navbar-left" method="GET" role="search">
+								<div class="form-group">
+									<input type="text" name="q" class="form-control" placeholder="Search">
+								</div>
+								<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+							</form> -->
+							<ul class="nav navbar-nav navbar-right">
+							<li><a href="#" target="_blank">Visit Site</a></li>
+							<li class="dropdown cart-90deg">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+									Account
+									<span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+										<li class="dropdown-header">SETTINGS</li>
+										<li class=""><a href="#">User Setting</a></li>
+										<li class=""><a href="#">Main Setting</a></li>
+										<li class=""><a href="#">Admin Setting</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Logout</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</div> 
+			</nav>
+<div id="" class="container-fluid main-container menurem">
+	<div class="col-md-2 col-sm-3 sidebar">
+		<div class="row">
+		<!-- uncomment code for absolute positioning tweek see top comment in css -->
+			<div class="absolute-wrapper"> </div>
+			<!-- Menu -->
+			<div class="side-menu">
+				<nav class="navbar " role="navigation">
+					<!-- Main Menu -->
+					<div class="side-menu-container ">
+						<ul class="nav navbar-nav " id="slidrmv">
+							<li class="" id="dashbrd"><a href="#"><span class="fa fa-tachometer"></span>Dashboard</a></li>
+							<li id="vendor"><a href="#"><span class="fa fa-users"></span>Vendors & Contractors</a></li>
+							<li id="act"><a href="#"><span class="arrow-1-img"></span>Act Returns</a></li>				
+							<li id="filereturn"><a href="#"><span class="folder"></span>File Returns</a></li>
+							<li id="nc_unit"><a href="#"><span class="fa fa-folder"></span>Unit Compliance</a></li>
+							<li id="nc_act"><a href="#"><span class="fa fa-folder-open-o"></span>Act Compliance</a></li>
+							<li id="nc_all"><a href="#"><span class="fa fa-globe"></span>All Compliance</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</nav>
+
+			</div>
+		</div>  		
+	</div>
+	<div id="nh_show">
+		<div class="col-md-10 col-sm-9 content _PAD20 animated fadeInDown ">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="background-color: white;padding: 15px;">
+					<span id="tit1" class="section_show">Dashboard</span>
+					<span id="tit2">Act Returns</span>
+					<span id="tit3">Vendors & Contractors</span>
+					<span id="tit4">File Returns</span>
+					<span id="tit5">Unit Compliance</span>
+					<span id="tit6">Act Compliance</span>
+					<span id="tit7">All Compliance </span>
+				</div>
+				<div class="panel-body ovrflwH">
+					<article id="charts" class="section_show fadeInRight">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="chartContainer1" style="height: 300px;float:left;"></div> 
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="chartContainer2" style="height: 300px;float:left;"></div> </br>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="chartContainer3" style="height: 300px;float:left;"></div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="chartContainer4" style="height: 300px;float:left;"></div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="chartContainer5" style="height: 300px;float:left;"></div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="chartContainer6" style="height: 300px;float:left;"></div>
+					</article>
+					<article id="ncUnit" class="fadeInRight">
+						<div>
+							<div class="dropdown">
+								<button class="btn btn-primary dropdown-toggle btn_wdth" type="button" data-toggle="dropdown">BLR
+								<span class="caret align_right"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">BLR</a></li>
+									<li><a href="#">HYD</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Vendor Name</th>
+										<th>Act Name</th>
+										<th>For Month</th>
+										<th>Submission Date</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>John</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><!-- <img src="images\partial.png"></img> --><span class="tick">&#10004;</span></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Peter</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><!-- <img src="images\partial.png"></img> --><span class="cross">&#10007;</span></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>John</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><!-- <img src="images\completed.png"></img> --><span class="tick">&#10004;</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</article>
+					<article id="ncAct" class="fadeInRight">
+						<div class="table-responsive">
+						<div>
+							<div class="dropdown">
+								<button class="btn btn-primary dropdown-toggle btn_wdth" type="button" data-toggle="dropdown">PF 	
+								<span class="caret align_right"></span></button>
+								<ul class="dropdown-menu">
+									<li><a href="#">PF</a></li>
+									<li><a href="#">ESMIC</a></li>
+								</ul>
+							</div>
+						</div>
+						
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Vendor Name</th>
+										<th>Act Name</th>
+										<th>For Month</th>
+										<th>Submission Date</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>John</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><span class="cross">&#10007;</span></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Peter</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><span class="cross">&#10007;</span></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>John</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><span class="cross">&#10007;</span></td>
+									</tr>
+								</tbody>
+							</table>
+						   </div>
+					</article>
+					<article id="ncAll" class="fadeInRight">
+						<div class="table-responsive">									
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Vendor Name</th>
+										<th>Act Name</th>
+										<th>For Month</th>
+										<th>Submission Date</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>John</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><span class="cross">&#10007;</span></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Peter</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><span class="cross">&#10007;</span></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>John</td>
+										<td>PF</td>
+										<td>Jan 2016</td>
+										<td>16 Feb 2016</td>
+										<td><span class="tick">&#10004;</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>    
+					</article>
+					<article id="act_sec" class="fadeInRight">
+						<div class=""  style="padding-right: 15px; padding-left: 15px;">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="table-responsive">
+										<div class="_addnewact"  onclick="addField();">
+											<button data-toggle="modal" data-target="#myModal" >
+												<span onclick="myFunction"><i class="fa fa-plus"></i></span>
+											</button>
+										</div>
+										<div class="_search">
+											<span class="search_section"><input type="text"><i class="fa fa-search search" id=""></i></span>	
+										</div>							      			
+										<table class="table tblData table-bordered table-hover display" id="example" cellspacing="0" width="100%">
+											<thead>
+												<tr>
+													<th>Act Name</th>
+													<th>Frequency</th>
+													<th>Return Date</th>
+													<th>For Month</th>
+													<th style="opacity: 0;">UserEDit</th>						             
+												</tr>
+											</thead>
+											<tbody>										        						            
+											</tbody>							          	
+										 </table>
+									</div><!--end of .table-responsive-->
+								</div>
+							</div>
+						</div>
+						</article>
+					<article id="vendor_sec" class="fadeInRight">
+						<div class="" style="padding-right: 15px; padding-left: 15px;">
+							<div class="row">
+								<div class="col-xs-12">
+									<div class="table-responsive">
+										<div class="_addnewvendor">
+											<button data-toggle="modal" data-target="#myModal" >
+												<span><i class="fa fa-plus"></i></span>
+											</button>
+										</div>
+										<div class="_search">
+											<span class="search_section"><input type="text"><i class="fa fa-search search" id=""></i></span>	
+										</div>							      			
+										<table class="table vendortblData table-bordered table-hover display" id="example" cellspacing="0" width="100%">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Effective Date</th>
+													<th>Closing Date</th>
+													<th>No.of Employees</th>
+													<th>Unit</th>
+													<th>Nature</th>
+													<th style="opacity: 0;width: 100px;display: block;">UserEDit</th>						             
+												</tr>
+											</thead>
+											<tbody>										        						            
+											</tbody>							          	
+										 </table>
+									</div><!--end of .table-responsive-->
+								</div>
+							</div>
+						</div>								
+					</article>
+					<article id="filereturn_sec" class="fadeInRight">
+						<div class="flie_return_section">
+							<div class="col-md-12">
+								<span class="col-md-3 col-sm-5 col-xs-12 ">Contractor / Vendor Name <aside>:</aside></span>
+								<span class="col-md-9 col-sm-7 col-xs-12">
+									<select>
+										<option>Vendor 1</option>
+										<option>Vendor 2</option>
+										<option>Vendor 3</option>
+										<option>Vendor 4</option>
+									</select>								
+								</span>
+							</div>
+							<div class="col-md-12">
+								<span class="col-md-3 col-sm-5 col-xs-12">File Return Type<aside>:</aside></span>
+								<span class="col-md-9 col-sm-7 col-xs-12">
+									<select>
+										<option>PF</option>
+										<option>ESMIC</option>
+									</select>								
+								</span>
+							</div>
+							<div class="col-md-12">
+								<span class="col-md-3 col-sm-5 col-xs-12">File Retuen<aside>:</aside></span>
+								<span class="col-md-9 col-sm-7 col-xs-12">
+									<input type="file" id="" style="padding: 3px 0;">								
+								</span>
+							</div>
+							<div class="col-md-12">
+								<span class="col-md-3 col-sm-5 col-xs-12">For Month<aside>:</aside></span>
+								<span class="col-md-9 col-sm-7 col-xs-12">
+									<input type="text" class="datepicker-here" data-language='en' data-min-view="months" data-view="months"  data-date-format="MM yyyy" />
+								</span>
+							</div>
+							<div class="col-md-12">
+								<span class="col-md-3 col-sm-5 col-xs-12">Submisson Date<aside>:</aside></span>
+								<span class="col-md-9 col-sm-7 col-xs-12">
+									<input type='text' class='datepicker-here' data-language='en' />
+								</span>
+							</div>
+							<div class="col-md-12">
+								<span class="col-md-3 col-sm-5 col-xs-12"></span>
+								<span class="col-md-9 col-sm-7 col-xs-12">
+									<button type="button" class="btn btn-primary" style="width: 135px;padding: 10px;">Submit</button>
+								</span>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div> 
+		</div>
+	</div>
+</div>

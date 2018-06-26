@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<% include layout.html %>
+	</head>
+	<body ng-app="portfolio" ng-controller="portfolio_ctrl">
+		<main>
+			<nav class="navbar navbar-default navbar-static-top ">
+				<div class="glass _PAD5">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed menurem" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<i class="fa fa-user"></i>
+							</button>
+							<a class="navbar-brand" href="#">
+								<img src="images/logo_icon.png" style="position: absolute; top: 5px; width: 50px;" />
+							</a>
+						</div>
+						<div class="collapse navbar-collapse user_resp_menu" id="bs-example-navbar-collapse-1">  
+							<ul class="nav navbar-nav navbar-right">
+									<li><a href="http://brijeshdhande.com" class="menu_items ladding_menu">www.brijeshdhande.com</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</div>
+			</nav> 
+			<div class="row col-xs-12 col-md-12 col-sm-12 main_container"> 
+				<div class="text-center _PDB20PX">
+					<img src="images/success.png"  style="position: relative; width: 50px;" class="succsess_img" />
+					<P class="portfolio_info">Congratulations! you are successfully registered.</p>
+				</div>
+				<div class="text-center _PDB20PX">
+					<p class = "portfolio_info text_center ">Your password has been successfully sent to your email (<b><%=email_id %>).</b></p><br>
+					<p class = "portfolio_info text_center">To login now click here 
+						<a href ="/login">login</a>
+					</p>
+					
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

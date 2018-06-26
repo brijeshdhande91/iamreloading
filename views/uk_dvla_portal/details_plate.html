@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title></title>
+		<link rel="icon" href="images/favicon.ico" type="image/png" />
+		<!-- Bootstrap -->
+		<link href="../stylesheets/bootstrap.min.css" rel="stylesheet" />
+		<!-- Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'/>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,400italic,300' rel='stylesheet' type='text/css' />
+		<link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<!-- Main Styles -->
+		<link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+		<script type="text/javascript" src="../javascripts/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="../javascripts/bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="../javascripts/script.js"></script>
+	</head>
+	<body ng-app="portfolio" ng-controller="portfolio_ctrl">
+	<style>
+		a:hover {
+		    color: #284695 !important;
+		    text-decoration: none !important;
+		 }   
+		.welcome_name{
+		  font-size: 14px;
+		  padding: 17px 6px; 
+		  color: #767676;
+		  font-weight: 400;
+		}
+		.arrw{
+		    position: absolute;
+		    right: 16px;
+		    background: white;
+		    top: -10px;
+		    /*left: 2px;*/
+		    border-radius: 10px;
+		}
+		.input-lg {
+    		height: 38px !important;
+    		font-weight: bold !important;
+    	}
+    	.label{
+    		font-weight: normal !important;
+    	}
+    	.header_dropdown{
+		  	position: absolute;
+		    z-index: 9999;
+		    top: 12px;
+		    left: 285px;
+		}
+		.header_dropdown .dropdown-menu>li>a:focus, .header_dropdown .dropdown-menu>li>a:hover{
+		    color: #b81e25; 
+		  }
+		.align_right{ float: right; position: relative;}	
+		.button-container button {
+		  outline: 0;
+		  cursor: pointer;
+		  position: relative;
+		  display: inline-block;
+		  background: 0;
+		  /*width: 240px;*/
+		  padding: 7px 6px;
+		  left: 15px;
+		  border: 2px solid #284695;
+		  /*padding: 20px 0;*/
+		  font-size: 24px;
+		  font-weight: 600;
+		  line-height: 1;
+		  text-transform: uppercase;
+		  overflow: hidden;
+		  -webkit-transition: .3s ease;
+		  transition: .3s ease;
+		  background-color: #284695;
+		  color: #ffffff;
+		}
+		.dropdown-menu {
+			min-width: 280px !important;
+		}
+		 @media screen and (-webkit-min-device-pixel-ratio:0) 
+		  { 
+		    .btn { padding: 7px 6px !important; line-height: 1 !important;	}
+		    .arrw{	position: absolute;	right: 16px;	background: white;	top: 5px !important;	border-radius: 10px;}
+		  }
+		  @-moz-document url-prefix() {
+		  	.arrw{ top: -10px;	left: 2px;	}
+		  }
+		  .btn{
+		  	padding: 8px 12px 3px 12px;	line-height: 9px;
+		  }
+	</style>
+		<% include ../portfolio_header.html %>
+		<main class="wait">
+			<div class="row col-xs-12 col-md-12 col-sm-12 main_container" style="width: 45% !important;"> 
+				<div class="button-container">
+					&nbsp;<a href="/uk_dvla_portal/<%=token%>" style="color: #000000;"> << back <!-- <button type="submit" value="back" class="go_button ">Back</button> --></a>
+				</div>
+				<div class="text-center _PDB20PX">
+					<h2 class="heading_name" style="color: #284695;"><b>UK DVLA Search Details</b></h2> 
+					<!-- <P class="portfolio_info">If you are intrested, enter your details here to get the password</p> -->
+				</div>
+				<div class="container ">
+					<form action="/register" class="form-horizontal" role="form" method='POST' name="form">
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4  col-sm-4 col-md-3 portfolio_label star_imp"  style="font-weight: normal !important;">Manufacturer :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">
+								  <input class="form-control input-lg"  type="text" ng-model="name" value="<%= details.make %>" name='user_name' style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label" style="font-weight: normal !important;">Model :</label>
+							<div class="col-xs-6 col-sm-4 col-md-3">          
+								<input class="form-control input-lg"  type="text" name='organisation_name' value="<%= details.model %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Year &nbsp:</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="email" name='user_email' ng-model="text" class="form-control input-lg alpha_lowr" value="<%= details.yearOfManufacture %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Date of Registration :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details.dateOfFirstRegistration %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Fuel :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details.fuelType %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Capacity :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details.cylinderCapacity %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Model :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details.model %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Color :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details.colour %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Doors :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details.numberOfDoors %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Wheel Plan :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details. wheelPlan %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Tax Detail :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details.taxDetails %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						<div class="form-group">
+						<label class="text_align control-label col-xs-4 col-sm-4 col-md-3 portfolio_label star_imp" style="font-weight: normal !important;">Mot Detail :</label>
+							<div class=" col-xs-6 col-sm-4 col-md-3">          
+								<input type="text" class="form-control input-lg" name='user_phone' value="<%= details.motDetails %>" style="border:none !important; box-shadow: none !important;">
+							</div>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

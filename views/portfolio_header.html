@@ -1,0 +1,43 @@
+<div class="main_hdr">
+	<div class="header_nav header_border_ecomerce" style="background-color: #ffffff important;">
+		<nav class="navbar navbar-default navbar-static-top ">
+			<div class="glass _PAD5">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed menurem" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<i class="fa fa-user"></i>
+						</button>
+						<a class="navbar-brand" href="#">
+							<img src="../images/logo_icon.png" style="position: absolute; top: 5px; width: 50px;" />
+						</a>
+					</div>
+					<div class="collapse navbar-collapse user_resp_menu" id="bs-example-navbar-collapse-1">  
+						<ul class="nav navbar-nav navbar-right">
+								<li><a href="http://brijeshdhande.com" class="menu_items ladding_menu">www.brijeshdhande.com</a></li>
+								<li class="welcome_name">welcome &nbsp;<span style="color: #b81e25; font-weight: 700;"><%=name %></span></li>
+								<li class="website" style="margin-right: 25px;"><a href="/logout" class=" ladding_menu"><img src="../images/logout.png" /></a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</div>
+		</nav> 
+	</div>
+	<div class="dropdown header_dropdown header_nav ">
+		    <button class="btn dropdown-toggle dropdown_reg btn_headr header_dropdown_mob menu_icon" type="button" data-toggle="dropdown" style="background-color: #fff; font-size: 14px; border-radius:4px; color: #767676; width: 280px; border: 1px solid #767676; text-align: left;" ><%=select %>
+		    <!-- <span class="caret align_right"></span></button> -->
+		    <span class="arrw align_right"><span class="caret align_rt"></span></span></button>
+		    <ul class="dropdown-menu headr_menu dropdown_menu_mob ">
+		      <li><a href="/portfolio/<%=token %>">Select Portfolio</a></li>
+		      <li><a  href="/compliance_portal/<%=token %>">Compliance Portal</a></li>
+		      <li><a  href="/gas_energy_intranet/<%=token %>">Gas & Energy Intranet Portal</a></li>
+		      <li><a  href="/uk_dvla_portal/<%=token %>">UK DVLA Portal</a></li>
+		      <li><a  href="/fb_services/<%=token %>">Food & Breaverages Portal</a></li>
+		      <li><a  href="/ecommerce_portal/<%=token %>">Ecommerce Portal</a></li>
+		      <li><a  href="/marketing_app/<%=token %>/marketing_app_login">Marketing App</a></li>
+		    </ul>
+	
+		
+	</div>
+	<img id="arrow_hide" style="width:28px; top: -2px; right: 50%; display: block; position: fixed; z-index: 9999;" class="objblink align_center" id="imgnow" src="../images/down_arrows.png" alt="Fair">
+</div>

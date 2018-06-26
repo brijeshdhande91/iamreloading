@@ -1,0 +1,3272 @@
+{
+  "currentBillData": {
+    "currentBillData": {
+      "userProfile": {
+        "name": "Michael Knox",
+        "address": {
+          "streetAddress": "1077 WHITE AVE",
+          "city": "LINCOLN PARK",
+          "state": "MI",
+          "zip": "48146"
+        }
+      },
+      "statusBarMessages": [],
+      "totalAmountDue": "1523.17",
+      "accounts": [
+        {
+          "accountNumber": "245052000032",
+          "serviceAddress": [
+            {
+              "siteID": "1234",
+              "address": "1077 WHITE AVE",
+              "city": "LINCOLN PARK",
+              "state": "MI",
+              "zip": "48146"
+            },
+            {
+              "siteID": "4567",
+              "address": "1081 WHITE AVE APT 1",
+              "city": "LINCOLN PARK",
+              "state": "MI",
+              "zip": "48146"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "PD0106",
+              "text": "Please pay the minimum shutoff amount of $994.99 immediately to prevent service shutoff.",
+              "type": "AS_PastDueL2StsMsg",
+              "style": "emergency_bg"
+            },
+            {
+              "code": "CB0106",
+              "text": "You still have a current amount of $528.18 due on May 04, 2015",
+              "type": "AS_CurrentAmountStsMsg",
+              "style": "michigan"
+            }
+          ],
+          "accountInlineMessages": [],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "BLANK",
+            "depositAmount": "994.99",
+            "dueDate": "2015-04-24T04:00:00.000Z"
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "1523.17",
+            "dueDate": "May 04, 2015",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "March 08 - April 09, 2015",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "994.99",
+                "electric": "265.49",
+                "gas": "243.55",
+                "currentBill": "528.18",
+                "averageElectric": 8.3,
+                "averageGas": 7.61
+              }
+            },
+            "billId": "552834893"
+          }
+        }
+      ]
+    }
+  },
+  "balanceData": {
+    "numberOfAccounts": 1,
+    "totalAmountDue": {
+      "prefix": "Total Amount",
+      "amount": 1523.17,
+      "suffix": "is due by:",
+      "dueDate": "May 04, 2015",
+      "priorityLevel": 1
+    }
+  },
+  "billCompareData": {
+    "accountNumber": "245052000032",
+    "siteId": "1234",
+    "currentCycle": {
+      "startDate": "March 07, 2015",
+      "endDate": "April 06, 2015",
+      "dayCount": 31,
+      "billAmount": 42.36,
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": 161
+        },
+        {
+          "type": "Electric",
+          "unit": "KWH",
+          "usage": 909
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 43,
+        "averageTemperatures": [
+          {
+            "date": "March 07, 2015",
+            "temp": 41
+          },
+          {
+            "date": "March 08, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 09, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 10, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 11, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 12, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 13, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 14, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 15, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 16, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 17, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 18, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 019, 2015",
+            "temp": 43
+          },
+          {
+            "date": "March 20, 2015",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-21T05:00:00Z",
+            "high": true,
+            "temp": 50
+          },
+          {
+            "date": "2015-03-22T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-23T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-24T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-25T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-26T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-27T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-28T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-29T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-30T05:00:00Z",
+            "low": true,
+            "temp": 33
+          },
+          {
+            "date": "2015-03-31T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-01T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-02T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-03T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-04T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-05T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-06T05:00:00Z",
+            "temp": 43
+          }
+        ]
+      }
+    },
+    "lastCycle": {
+      "startDate": "February 07, 2015",
+      "endDate": "March 06, 2015",
+      "dayCount": "27",
+      "billAmount": "59.36",
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": "161"
+        },
+        {
+          "type": "Electric",
+          "unit": "KWH",
+          "usage": "909"
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 34,
+        "averageTemperatures": [
+          {
+            "date": "February 07, 2015",
+            "temp": 43
+          },
+          {
+            "date": "February 08, 2015",
+            "temp": 44
+          },
+          {
+            "date": "February 09, 2015",
+            "low": true,
+            "temp": 30
+          },
+          {
+            "date": "February 10, 2015",
+            "temp": 32
+          },
+          {
+            "date": "February 11, 2015",
+            "temp": 44
+          },
+          {
+            "date": "2015-02-12T05:00:00Z",
+            "temp": 45
+          },
+          {
+            "date": "2015-02-13T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-02-14T05:00:00Z",
+            "high": true,
+            "temp": 46
+          },
+          {
+            "date": "2015-02-15T05:00:00Z",
+            "temp": 55
+          },
+          {
+            "date": "2015-02-16T05:00:00Z",
+            "temp": 33
+          },
+          {
+            "date": "2015-02-17T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2015-02-18T05:00:00Z",
+            "temp": 31
+          },
+          {
+            "date": "2015-02-19T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2015-02-20T05:00:00Z",
+            "temp": 31
+          },
+          {
+            "date": "2015-02-21T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-02-22T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2015-0223T05:00:00Z",
+            "temp": 42
+          },
+          {
+            "date": "2015-0224T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2015-0225T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2015-0226T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2015-0227T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2015-0228T05:00:00Z",
+            "temp": 30
+          },
+          {
+            "date": "2015-03-01T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-03-02T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2015-03-03T05:00:00Z",
+            "temp": 36
+          },
+          {
+            "date": "2015-03-04T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2015-03-05T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2015-03-06T05:00:00Z",
+            "temp": 39
+          }
+        ]
+      }
+    },
+    "currentCycleLastYear": {
+      "startDate": "February 08, 2014",
+      "endDate": "March 06, 2015",
+      "dayCount": 30,
+      "billAmount": 52.36,
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": "161"
+        },
+        {
+          "type": "Electric",
+          "unit": "KWH",
+          "usage": "909"
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 41,
+        "averageTemperatures": [
+          {
+            "date": "February 08, 2014",
+            "high": true,
+            "temp": 50
+          },
+          {
+            "date": "February 09, 2014",
+            "temp": 44
+          },
+          {
+            "date": "February 10, 2014",
+            "temp": 32
+          },
+          {
+            "date": "February 11, 2014",
+            "low": true,
+            "temp": 31
+          },
+          {
+            "date": "February 12, 2014",
+            "temp": 45
+          },
+          {
+            "date": "February 13, 2014",
+            "temp": 34
+          },
+          {
+            "date": "February 14, 2014",
+            "temp": 46
+          },
+          {
+            "date": "February 15, 2014",
+            "temp": 35
+          },
+          {
+            "date": "February 16, 2014",
+            "temp": 33
+          },
+          {
+            "date": "February 17, 2014",
+            "temp": 35
+          },
+          {
+            "date": "February 18, 2014",
+            "temp": 31
+          },
+          {
+            "date": "February 19, 2014",
+            "temp": 32
+          },
+          {
+            "date": "February 20, 2014",
+            "temp": 31
+          },
+          {
+            "date": "2014-02-21T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2014-02-22T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2014-02-23T05:00:00Z",
+            "temp": 42
+          },
+          {
+            "date": "2014-02-24T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2014-02-25T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2014-02-26T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2014-02-27T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2014-02-28T05:00:00Z",
+            "temp": 30
+          },
+          {
+            "date": "2014-0301T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2014-0302T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2014-0303T05:00:00Z",
+            "temp": 36
+          },
+          {
+            "date": "2014-0304T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2014-0305T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2014-0306T05:00:00Z",
+            "temp": 39
+          }
+        ]
+      }
+    }
+  },
+  "billComparison": {
+    "accountNumber": "245052000032",
+    "siteId": "4567",
+    "currentCycle": {
+      "startDate": "March 07, 2015",
+      "endDate": "April 06, 2015",
+      "dayCount": 31,
+      "billAmount": 342.36,
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": 161
+        },
+        {
+          "type": "Electric",
+          "unit": "KWH",
+          "usage": 909
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 43,
+        "averageTemperatures": [
+          {
+            "date": "March 07, 2015",
+            "temp": 41
+          },
+          {
+            "date": "2015-03-08T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-09T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-10T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-11T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-12T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-13T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-14T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-15T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-16T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-17T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-18T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-19T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-20T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-21T05:00:00Z",
+            "high": true,
+            "temp": 50
+          },
+          {
+            "date": "2015-03-22T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-23T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-24T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-25T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-26T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-27T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-28T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-29T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-30T05:00:00Z",
+            "low": true,
+            "temp": 33
+          },
+          {
+            "date": "2015-03-31T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-01T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-02T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-03T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-04T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-05T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-06T05:00:00Z",
+            "temp": 43
+          }
+        ]
+      }
+    },
+    "lastCycle": {
+      "startDate": "Febraury 07, 2015",
+      "endDate": "March 06, 2015",
+      "dayCount": "27",
+      "billAmount": "359.36",
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": "161"
+        },
+        {
+          "type": "Electric",
+          "unit": "KWH",
+          "usage": "909"
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 34,
+        "averageTemperatures": [
+          {
+            "date": "Febraury 07, 2015",
+            "temp": 43
+          },
+          {
+            "date": "2015-02-08T05:00:00Z",
+            "temp": 44
+          },
+          {
+            "date": "2015-02-09T05:00:00Z",
+            "low": true,
+            "temp": 30
+          },
+          {
+            "date": "2015-02-10T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2015-02-11T05:00:00Z",
+            "temp": 44
+          },
+          {
+            "date": "2015-02-12T05:00:00Z",
+            "temp": 45
+          },
+          {
+            "date": "2015-02-13T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-02-14T05:00:00Z",
+            "high": true,
+            "temp": 46
+          },
+          {
+            "date": "2015-02-15T05:00:00Z",
+            "temp": 55
+          },
+          {
+            "date": "2015-02-16T05:00:00Z",
+            "temp": 33
+          },
+          {
+            "date": "2015-02-17T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2015-02-18T05:00:00Z",
+            "temp": 31
+          },
+          {
+            "date": "2015-02-19T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2015-02-20T05:00:00Z",
+            "temp": 31
+          },
+          {
+            "date": "2015-02-21T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-02-22T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2015-0223T05:00:00Z",
+            "temp": 42
+          },
+          {
+            "date": "2015-0224T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2015-0225T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2015-0226T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2015-0227T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2015-0228T05:00:00Z",
+            "temp": 30
+          },
+          {
+            "date": "2015-03-01T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-03-02T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2015-03-03T05:00:00Z",
+            "temp": 36
+          },
+          {
+            "date": "2015-03-04T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2015-03-05T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2015-03-06T05:00:00Z",
+            "temp": 39
+          }
+        ]
+      }
+    },
+    "currentCycleLastYear": {
+      "startDate": "Febraury 08, 2014",
+      "endDate": "March 06, 2014",
+      "dayCount": 30,
+      "billAmount": 352.36,
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": "161"
+        },
+        {
+          "type": "Electric",
+          "unit": "KWH",
+          "usage": "909"
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 41,
+        "averageTemperatures": [
+          {
+            "date": "Febraury 08, 2014",
+            "high": true,
+            "temp": 50
+          },
+          {
+            "date": "2014-0209T05:00:00Z",
+            "temp": 44
+          },
+          {
+            "date": "2014-02-10T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2014-02-11T05:00:00Z",
+            "low": true,
+            "temp": 31
+          },
+          {
+            "date": "2014-02-12T05:00:00Z",
+            "temp": 45
+          },
+          {
+            "date": "2014-02-13T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2014-02-14T05:00:00Z",
+            "temp": 46
+          },
+          {
+            "date": "2014-02-15T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2014-02-16T05:00:00Z",
+            "temp": 33
+          },
+          {
+            "date": "2014-02-17T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2014-02-18T05:00:00Z",
+            "temp": 31
+          },
+          {
+            "date": "2014-02-19T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2014-02-20T05:00:00Z",
+            "temp": 31
+          },
+          {
+            "date": "2014-02-21T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2014-02-22T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2014-02-23T05:00:00Z",
+            "temp": 42
+          },
+          {
+            "date": "2014-02-24T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2014-02-25T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2014-02-26T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2014-02-27T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2014-02-28T05:00:00Z",
+            "temp": 30
+          },
+          {
+            "date": "2014-0301T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2014-0302T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2014-0303T05:00:00Z",
+            "temp": 36
+          },
+          {
+            "date": "2014-0304T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2014-0305T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2014-0306T05:00:00Z",
+            "temp": 39
+          }
+        ]
+      }
+    }
+  },
+  "invoiceLineItems": [
+    {
+      "product": "Electric",
+      "serviceAddresses": [
+        {
+          "siteID": "803060",
+          "addressLine1": "1783 HUNTINGTON BLVD",
+          "addressLine2": "",
+          "city": "GROSSE POINTE WOODS",
+          "state": "MI",
+          "zipcode": "48236",
+          "meters": [
+            {
+              "meterNumber": "9829034",
+              "meterStart": "63514",
+              "meterStop": "63809",
+              "readingType": "Actual",
+              "lineItemDetails": [
+                {
+                  "lineItemDescription": "Power Supply Energy",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "295 KWH @ 0.06912",
+                      "amount": 20.39
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Renewable Energy Plan Surchg",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.43
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Other Power Supply Surcharges*",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.76
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Service Charge ",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 6
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Distribution",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "295 KWH @ 0.05003",
+                      "amount": 14.76
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Energy Optimization",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "295 KWH @ 0.002758",
+                      "amount": 0.81
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "VHWF Credit",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": -1.59
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "LIEAF Factor",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.97
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Other Delivery Surcharges**",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 1.18
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "GreenCurrents Renewable Block",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "1  @ 2.50",
+                      "amount": 2.5
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Residential Michigan Sales Tax",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 1.81
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "meterNumber": "4426854",
+              "meterStart": "31810",
+              "meterStop": "31819",
+              "readingType": "Actual",
+              "lineItemDetails": [
+                {
+                  "lineItemDescription": "Power Supply Energy",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "9 KWH @ 0.03796",
+                      "amount": 0.34
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Other Power Supply Surcharges*",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.02
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Distribution",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "9 KWH @ 0.05379",
+                      "amount": 0.48
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Energy Optimization",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "9 KWH @ 0.002758",
+                      "amount": 0.02
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Other Delivery Surcharges**",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.04
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Residential Michigan Sales Tax",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.04
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product": "Gas",
+      "serviceAddresses": [
+        {
+          "siteID": "803060",
+          "addressLine1": "1783 HUNTINGTON BLVD",
+          "addressLine2": "",
+          "city": "GROSSE POINTE WOODS",
+          "state": "MI",
+          "zipcode": "48236",
+          "meters": [
+            {
+              "meterNumber": "5522910",
+              "meterStart": "6455",
+              "meterStop": "6512",
+              "readingType": "Actual",
+              "lineItemDetails": [
+                {
+                  "lineItemDescription": "Customer Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 10.5
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Distribution Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "57 CCF @ 0.24942",
+                      "amount": 14.22
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Energy Optimization",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "57 CCF @ 0.01777",
+                      "amount": 1.01
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Cost Recovery",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "57 CCF @ 0.407",
+                      "amount": 23.2
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "IRM Surcharge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.88
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Reservation Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "57 CCF @ 0.029",
+                      "amount": 1.65
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "U-16877 RDM Surch./Credit",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.01
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Residential Michigan Sales Tax",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 2.06
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "siteID": "1596708",
+          "addressLine1": "19176 WOODSIDE ST",
+          "addressLine2": "",
+          "city": "HARPER WOODS",
+          "state": "MI",
+          "zipcode": "48225",
+          "meters": [
+            {
+              "meterNumber": "8501092",
+              "meterStart": "3670",
+              "meterStop": "3686",
+              "readingType": "Actual",
+              "lineItemDetails": [
+                {
+                  "lineItemDescription": "Customer Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 10.5
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Distribution Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "16 CCF @ 0.24942",
+                      "amount": 3.99
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Energy Optimization",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "16 CCF @ 0.01777",
+                      "amount": 0.28
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Cost Recovery",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "16 CCF @ 0.407",
+                      "amount": 6.51
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "IRM Surcharge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.88
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Reservation Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "16 CCF @ 0.029",
+                      "amount": 0.46
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Residential Michigan Sales Tax",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.9
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product": "Services and Fees",
+      "totalAmount": 18.95,
+      "lineItemDetails": [
+        {
+          "lineItemDescription": "HPP Ultimate Protection***",
+          "itemDetails": [
+            {
+              "amount": 29.95
+            },
+            {}
+          ]
+        },
+        {
+          "lineItemDescription": "Interest Amount",
+          "itemDetails": [
+            {
+              "amount": -11
+            },
+            {}
+          ]
+        }
+      ]
+    }
+  ],
+  "paymentPlanData": {
+    "name": "BWB",
+    "displayName": "BudgetWise Billing",
+    "details": {
+      "planStartDate": "February 05, 1996",
+      "planAmountDue": {
+        "amount": "127.00",
+        "prefix": "",
+        "style": "",
+        "suffix": ""
+      },
+      "lastPayment": {
+        "amount": "127.00",
+        "date": "March 17, 2015"
+      },
+      "accountBalance": {
+        "amount": "279.00",
+        "date": "March 31, 2015",
+        "suffix": ""
+      },
+      "actualCharges": {
+        "amount": "1676.00",
+        "asOfDate": "March 31, 2015"
+      },
+      "payments": {
+        "amount": "1397.00",
+        "asOfDate": "March 17, 2015"
+      },
+      "cycles": [
+        {
+          "period": "Apr",
+          "current": {
+            "amount": 156.47,
+            "label": "'14",
+            "recalculation": "false",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 194.87,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "May",
+          "current": {
+            "amount": 115.23,
+            "label": "'14",
+            "recalculation": "false",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 132.62,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "Jun",
+          "current": {
+            "amount": 49.96,
+            "label": "'14",
+            "recalculation": "true",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 73.53,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "Jul",
+          "current": {
+            "amount": 44.62,
+            "label": "'14",
+            "recalculation": "false",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 45.15,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "Aug",
+          "current": {
+            "amount": 46.89,
+            "label": "'14",
+            "recalculation": "false",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 44.58,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "Sep",
+          "current": {
+            "amount": 53.87,
+            "label": "'14",
+            "recalculation": "true",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 47.03,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "Oct",
+          "current": {
+            "amount": 85.48,
+            "label": "'14",
+            "recalculation": "false",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 62.23,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "Nov",
+          "current": {
+            "amount": 168.53,
+            "label": "'14",
+            "recalculation": "false",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 136.21,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "Dec",
+          "current": {
+            "amount": 229.44,
+            "label": "'14",
+            "recalculation": "true",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 175.04,
+            "label": "'13"
+          }
+        },
+        {
+          "period": "Jan",
+          "current": {
+            "amount": 311.31,
+            "label": "'15",
+            "recalculation": "false",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 247.77,
+            "label": "'14"
+          }
+        },
+        {
+          "period": "Feb",
+          "current": {
+            "amount": 46.14,
+            "label": "'15",
+            "recalculation": "false",
+            "settlement": "false"
+          },
+          "previous": {
+            "amount": 270.24,
+            "label": "'14"
+          }
+        },
+        {
+          "period": "Mar",
+          "current": {
+            "amount": 369.03,
+            "label": "'15",
+            "recalculation": "false",
+            "settlement": "true"
+          },
+          "previous": {
+            "amount": 212.5,
+            "label": "'14"
+          }
+        }
+      ]
+    }
+  },
+  "billComparison0101": {
+    "accountNumber": "245052000032",
+    "siteId": "4567",
+    "currentCycle": {
+      "startDate": "March 08, 2014",
+      "endDate": "April 06, 2014",
+      "dayCount": 31,
+      "billAmount": 342.36,
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": 161
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 43,
+        "averageTemperatures": [
+          {
+            "date": "2015-03-07T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2015-03-08T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-09T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-10T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-11T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-12T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-13T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-14T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-15T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-16T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-17T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-18T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-19T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-20T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-21T05:00:00Z",
+            "high": true,
+            "temp": 50
+          },
+          {
+            "date": "2015-03-22T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-23T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-24T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-25T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-26T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-27T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-28T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-29T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-03-30T05:00:00Z",
+            "low": true,
+            "temp": 33
+          },
+          {
+            "date": "2015-03-31T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-01T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-02T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-03T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-04T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-05T05:00:00Z",
+            "temp": 43
+          },
+          {
+            "date": "2015-04-06T05:00:00Z",
+            "temp": 43
+          }
+        ]
+      }
+    },
+    "lastCycle": {
+      "startDate": "Febraury 07, 2015",
+      "endDate": "March 06, 2015",
+      "dayCount": "27",
+      "billAmount": "359.36",
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": "161"
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 34,
+        "averageTemperatures": [
+          {
+            "date": "Febraury 07, 2015",
+            "temp": 43
+          },
+          {
+            "date": "2015-02-08T05:00:00Z",
+            "temp": 44
+          },
+          {
+            "date": "2015-02-09T05:00:00Z",
+            "low": true,
+            "temp": 30
+          },
+          {
+            "date": "2015-02-10T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2015-02-11T05:00:00Z",
+            "temp": 44
+          },
+          {
+            "date": "2015-02-12T05:00:00Z",
+            "temp": 45
+          },
+          {
+            "date": "2015-02-13T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-02-14T05:00:00Z",
+            "high": true,
+            "temp": 46
+          },
+          {
+            "date": "2015-02-15T05:00:00Z",
+            "temp": 55
+          },
+          {
+            "date": "2015-02-16T05:00:00Z",
+            "temp": 33
+          },
+          {
+            "date": "2015-02-17T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2015-02-18T05:00:00Z",
+            "temp": 31
+          },
+          {
+            "date": "2015-02-19T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2015-02-20T05:00:00Z",
+            "temp": 31
+          },
+          {
+            "date": "2015-02-21T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-02-22T05:00:00Z",
+            "temp": 32
+          },
+          {
+            "date": "2015-0223T05:00:00Z",
+            "temp": 42
+          },
+          {
+            "date": "2015-0224T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2015-0225T05:00:00Z",
+            "temp": 41
+          },
+          {
+            "date": "2015-0226T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2015-0227T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2015-0228T05:00:00Z",
+            "temp": 30
+          },
+          {
+            "date": "2015-03-01T05:00:00Z",
+            "temp": 34
+          },
+          {
+            "date": "2015-03-02T05:00:00Z",
+            "temp": 35
+          },
+          {
+            "date": "2015-03-03T05:00:00Z",
+            "temp": 36
+          },
+          {
+            "date": "2015-03-04T05:00:00Z",
+            "temp": 37
+          },
+          {
+            "date": "2015-03-05T05:00:00Z",
+            "temp": 38
+          },
+          {
+            "date": "2015-03-06T05:00:00Z",
+            "temp": 39
+          }
+        ]
+      }
+    },
+    "currentCycleLastYear": {
+      "startDate": "Febraury 08, 2014",
+      "endDate": "March 07, 2014",
+      "dayCount": 30,
+      "billAmount": 352.36,
+      "products": [
+        {
+          "type": "Gas",
+          "unit": "CCF",
+          "usage": "161"
+        }
+      ],
+      "averageDailyTemperatures": {
+        "average": 41,
+        "averageTemperatures": [
+          {
+            "date": "Febraury 08, 2014",
+            "high": true,
+            "temp": 50
+          },
+          {
+            "date": "Febraury 09, 2014",
+            "temp": 44
+          },
+          {
+            "date": "Febraury 10, 2014",
+            "temp": 32
+          },
+          {
+            "date": "Febraury 11, 2014",
+            "low": true,
+            "temp": 31
+          },
+          {
+            "date": "Febraury 12, 2014",
+            "temp": 45
+          },
+          {
+            "date": "Febraury 13, 2014",
+            "temp": 34
+          },
+          {
+            "date": "Febraury 14, 2014",
+            "temp": 46
+          },
+          {
+            "date": "Febraury 15, 2014",
+            "temp": 35
+          },
+          {
+            "date": "Febraury 16, 2014",
+            "temp": 33
+          },
+          {
+            "date": "Febraury 17, 2014",
+            "temp": 35
+          },
+          {
+            "date": "Febraury 18, 2014",
+            "temp": 31
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 32
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 31
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 34
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 32
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 42
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 41
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 41
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 37
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 38
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 30
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 34
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 35
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 36
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 37
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 38
+          },
+          {
+            "date": "Febraury 08, 2014",
+            "temp": 39
+          }
+        ]
+      }
+    }
+  },
+  "currentBillDataPayment": {
+    "currentBillData": {
+      "userProfile": {
+        "name": "Wayne Lewis",
+        "address": {
+          "streetAddress": "900 S THIRD AVE",
+          "city": "ALPENA",
+          "state": "MI",
+          "zip": "49707"
+        }
+      },
+      "statusBarMessages": [],
+      "totalAmountDue": "127.00",
+      "accounts": [
+        {
+          "accountNumber": "381042000012",
+          "serviceAddress": [
+            {
+              "siteID": "1010",
+              "address": "138 N 5TH ST APT 5",
+              "city": "ROGERS CITY",
+              "state": "MI",
+              "zip": "49779"
+            },
+            {
+              "siteID": "0101",
+              "address": "900 S THIRD AVE",
+              "city": "ALPENA",
+              "state": "MI",
+              "zip": "49707"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "PD0904",
+              "text": "Please pay your total past due amount of $127.00. You must pay a minimum  amount of $127.00 immediately to stay enrolled in BudgetWise Billing.",
+              "type": "AS_PastDueL1StsMsg",
+              "style": "alert_bg"
+            }
+          ],
+          "accountInlineMessages": [],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "127.00",
+            "dueDate": "April 22, 2014",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "January 02 - March 05, 2015",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "gas": "415.17",
+                "currentBill": "415.17",
+                "averageElectric": 0,
+                "averageGas": 6.7
+              }
+            },
+            "billId": "551888073"
+          }
+        }
+      ]
+    }
+  },
+  "balanceDataPayment": {
+    "numberOfAccounts": 1,
+    "totalAmountDue": {
+      "prefix": "Total BudgetWise Billing Amount",
+      "amount": "127.00",
+      "suffix": "will be automatically withdrawn on",
+      "dueDate": "April 22, 2014",
+      "priorityLevel": 1
+    }
+  },
+  "invoiceLineItemsPayment": [
+    {
+      "product": "Gas",
+      "serviceAddresses": [
+        {
+          "siteID": "803060",
+          "addressLine1": "1783 HUNTINGTON BLVD",
+          "addressLine2": "",
+          "city": "GROSSE POINTE WOODS",
+          "state": "MI",
+          "zipcode": "48236",
+          "meters": [
+            {
+              "meterNumber": "5522910",
+              "meterStart": "6455",
+              "meterStop": "6512",
+              "readingType": "Actual",
+              "lineItemDetails": [
+                {
+                  "lineItemDescription": "Customer Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 10.5
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Distribution Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "57 CCF @ 0.24942",
+                      "amount": 14.22
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Energy Optimization",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "57 CCF @ 0.01777",
+                      "amount": 1.01
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Cost Recovery",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "57 CCF @ 0.407",
+                      "amount": 23.2
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "IRM Surcharge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.88
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Reservation Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "57 CCF @ 0.029",
+                      "amount": 1.65
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "U-16877 RDM Surch./Credit",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.01
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Residential Michigan Sales Tax",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 2.06
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "siteID": "1596708",
+          "addressLine1": "19176 WOODSIDE ST",
+          "addressLine2": "",
+          "city": "HARPER WOODS",
+          "state": "MI",
+          "zipcode": "48225",
+          "meters": [
+            {
+              "meterNumber": "8501092",
+              "meterStart": "3670",
+              "meterStop": "3686",
+              "readingType": "Actual",
+              "lineItemDetails": [
+                {
+                  "lineItemDescription": "Customer Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 10.5
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Distribution Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "16 CCF @ 0.24942",
+                      "amount": 3.99
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Energy Optimization",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "16 CCF @ 0.01777",
+                      "amount": 0.28
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Gas Cost Recovery",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "16 CCF @ 0.407",
+                      "amount": 6.51
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "IRM Surcharge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.88
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Reservation Charge",
+                  "itemDetails": [
+                    {
+                      "itemDetails": "16 CCF @ 0.029",
+                      "amount": 0.46
+                    }
+                  ]
+                },
+                {
+                  "lineItemDescription": "Residential Michigan Sales Tax",
+                  "itemDetails": [
+                    {
+                      "itemDetails": " ",
+                      "amount": 0.9
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "currentBillDataPlan": {
+    "currentBillData": {
+      "userProfile": {
+        "name": "Barbara Vanfossen",
+        "address": {
+          "streetAddress": "3276 BOLTWOOD DR",
+          "city": "MUSKEGON",
+          "state": "MI",
+          "zip": "49441"
+        }
+      },
+      "statusBarMessages": [],
+      "totalAmountDue": "438.65",
+      "accounts": [
+        {
+          "accountNumber": "492152000013",
+          "serviceAddress": [
+            {
+              "address": "2085 LAKESHORE DR APT 1",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            },
+            {
+              "address": "2085 LAKESHORE DR APT 3",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "PD0103",
+              "text": "Please pay your past due and current amount of $208.31 by May 04, 2015 to prevent a shutoff notice.",
+              "type": "AS_PastDueL1StsMsg",
+              "style": "alert_bg"
+            },
+            {
+              "code": "PAY0106",
+              "text": "We received your most recent payment of $350.00 on April 17, 2015",
+              "type": "AS_PaymentReceivedStsMsg",
+              "style": "lawn"
+            }
+          ],
+          "accountInlineMessages": [
+            {
+              "code": "PD1103",
+              "text": "Your Account is Past Due. Pay $208.31 by May 04, 2015",
+              "type": "IL_PastDueL1StsMsg",
+              "style": "alert_bg"
+            },
+            {
+              "code": "PD1101",
+              "text": "Due by May 04, 2015",
+              "type": "IL_CurrentAmountStsMsg",
+              "style": "michigan"
+            }
+          ],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "302.69",
+            "dueDate": "2015-01-28T05:00:00.000Z"
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "208.31",
+            "dueDate": "2015-05-04T04:00:00.000Z",
+            "totalPayments": "350.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "March 12 - April 09, 2015",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.64",
+                "gas": "200.93",
+                "other": "6.74",
+                "currentBill": "207.67",
+                "averageElectric": 0,
+                "averageGas": 7.18
+              }
+            },
+            "billId": "552858003"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": "March 12 - April 09, 2015",
+              "billAmount": {
+                "amount": "207.67"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "243"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": "28"
+              }
+            },
+            "lastMonth": {
+              "dateRange": "February 09 - March 12, 2015",
+              "billAmount": {
+                "change": "decrease",
+                "messageText": "",
+                "amount": "350.64"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "449",
+                    "change": "decrease"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "change": "decrease",
+                "numberOfDays": "31"
+              }
+            },
+            "lastYear": {
+              "dateRange": "March 11 - April 09, 2014",
+              "billAmount": {
+                "change": "decrease",
+                "messages": [],
+                "amount": "238.78"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "286",
+                    "change": "decrease"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "change": "decrease",
+                "numberOfDays": "29"
+              }
+            }
+          }
+        },
+        {
+          "accountNumber": "367645800023",
+          "serviceAddress": [
+            {
+              "address": "2550 CROZIER AVE",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "PAY0106",
+              "text": "We received your most recent payment of $350.00 on April 17, 2015",
+              "type": "AS_PaymentReceivedStsMsg",
+              "style": "lawn"
+            },
+            {
+              "code": "CB0101",
+              "text": "Your current bill of $180.48 is due on May 04, 2015",
+              "type": "AS_CurrentAmountStsMsg",
+              "style": "michigan"
+            }
+          ],
+          "accountInlineMessages": [
+            {
+              "code": "PD1101",
+              "text": "Due by May 04, 2015",
+              "type": "IL_CurrentAmountStsMsg",
+              "style": "michigan"
+            },
+            {
+              "code": "PAY0106",
+              "text": "We received your most recent payment of $350.00 on April 17, 2015",
+              "type": "AS_PaymentReceivedStsMsg",
+              "style": "lawn"
+            }
+          ],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "BLANK",
+            "depositAmount": "132.30",
+            "dueDate": "2012-02-24T05:00:00.000Z"
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "180.48",
+            "dueDate": "2015-05-04T04:00:00.000Z",
+            "totalPayments": "350.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "March 13 - April 09, 2015",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "gas": "180.77",
+                "currentBill": "180.77",
+                "averageElectric": 0,
+                "averageGas": 6.7
+              }
+            },
+            "billId": "552905586"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": "March 13 - April 09, 2015",
+              "billAmount": {
+                "amount": "180.77"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "231"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": "27"
+              }
+            },
+            "lastMonth": {
+              "dateRange": "February 09 - March 13, 2015",
+              "billAmount": {
+                "change": "decrease",
+                "messageText": "",
+                "amount": "349.71"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "464",
+                    "change": "decrease"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "change": "decrease",
+                "numberOfDays": "32"
+              }
+            },
+            "lastYear": {
+              "dateRange": "March 12 - April 09, 2014",
+              "billAmount": {
+                "change": "increase",
+                "messages": [],
+                "amount": "153.48"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "192",
+                    "change": "increase"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "change": "decrease",
+                "numberOfDays": "28"
+              }
+            }
+          }
+        },
+        {
+          "accountNumber": "492152000088",
+          "serviceAddress": [
+            {
+              "address": "2485 MORTON AVE APT B",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "CB0101",
+              "text": "Your current bill of $49.86 is due on May 04, 2015",
+              "type": "AS_CurrentAmountStsMsg",
+              "style": "michigan"
+            }
+          ],
+          "accountInlineMessages": [
+            {
+              "code": "PD1101",
+              "text": "Due by May 04, 2015",
+              "type": "IL_CurrentAmountStsMsg",
+              "style": "michigan"
+            }
+          ],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "49.86",
+            "dueDate": "2015-05-04T04:00:00.000Z",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "March 13 - April 09, 2015",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "gas": "49.86",
+                "currentBill": "49.86",
+                "averageElectric": 0,
+                "averageGas": 1.85
+              }
+            },
+            "billId": "552847858"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": "March 13 - April 09, 2015",
+              "billAmount": {
+                "amount": "49.86"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "52"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": "27"
+              }
+            },
+            "lastMonth": {
+              "dateRange": "February 09 - March 13, 2015",
+              "billAmount": {
+                "change": "decrease",
+                "messageText": "",
+                "amount": "81.01"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "95",
+                    "change": "decrease"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "change": "decrease",
+                "numberOfDays": "32"
+              }
+            },
+            "lastYear": {
+              "dateRange": "March 12 - April 09, 2014",
+              "billAmount": {
+                "change": "decrease",
+                "messages": [],
+                "amount": "68.35"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "75",
+                    "change": "decrease"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "change": "decrease",
+                "numberOfDays": "28"
+              }
+            }
+          }
+        },
+        {
+          "accountNumber": "367645800015",
+          "serviceAddress": [
+            {
+              "address": "3276 BOLTWOOD DR",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [
+            {
+              "code": "PAY0606",
+              "text": "We received your most recent payment of $125.91 on April 17, 2015",
+              "type": "AS_PaymentReceivedStsMsg",
+              "style": "lawn"
+            }
+          ],
+          "accountInlineMessages": [
+            {
+              "code": "PD1109",
+              "text": "You have a shut-off notice. Pay $101.62 immediately",
+              "type": "IL_PastDueL2StsMsg",
+              "style": "emergency_bg"
+            }
+          ],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "BLANK",
+            "depositAmount": "227.53",
+            "dueDate": "2012-02-24T05:00:00.000Z"
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "0.00",
+            "dueDate": "",
+            "totalPayments": "125.91",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": "March 13 - April 09, 2015",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "gas": "125.91",
+                "currentBill": "125.91",
+                "averageElectric": 0,
+                "averageGas": 4.66
+              }
+            },
+            "billId": "552892158"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": "March 13 - April 09, 2015",
+              "billAmount": {
+                "amount": "125.91"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "156"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": "27"
+              }
+            },
+            "lastMonth": {
+              "dateRange": "February 10 - March 13, 2015",
+              "billAmount": {
+                "change": "decrease",
+                "messageText": "",
+                "amount": "225.20"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "293",
+                    "change": "decrease"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "change": "decrease",
+                "numberOfDays": "31"
+              }
+            },
+            "lastYear": {
+              "dateRange": "March 12 - April 09, 2014",
+              "billAmount": {
+                "change": "increase",
+                "messages": [],
+                "amount": "120.12"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": "147",
+                    "change": "increase"
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "change": "decrease",
+                "numberOfDays": "28"
+              }
+            }
+          }
+        },
+        {
+          "accountNumber": "492152000021",
+          "serviceAddress": [
+            {
+              "address": "597 W CLAY AVE",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49440"
+            }
+          ],
+          "statusBarMessages": [],
+          "accountInlineMessages": [],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "0.00",
+            "dueDate": "",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": " - ",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "currentBill": "0",
+                "averageElectric": 0,
+                "averageGas": 0
+              }
+            },
+            "billId": "394675495"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": " - ",
+              "billAmount": {
+                "amount": "0"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "electric",
+                    "unit": "KWH",
+                    "amount": ""
+                  },
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": ""
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": ""
+              }
+            },
+            "lastMonth": {},
+            "lastYear": {}
+          }
+        },
+        {
+          "accountNumber": "492152000039",
+          "serviceAddress": [
+            {
+              "address": "2085 LAKESHORE DR APT 1",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [],
+          "accountInlineMessages": [],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "0.00",
+            "dueDate": "",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": " - ",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "currentBill": "0",
+                "averageElectric": 0,
+                "averageGas": 0
+              }
+            },
+            "billId": "0"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": " - ",
+              "billAmount": {
+                "amount": "0"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "electric",
+                    "unit": "KWH",
+                    "amount": ""
+                  },
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": ""
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": ""
+              }
+            },
+            "lastMonth": {},
+            "lastYear": {}
+          }
+        },
+        {
+          "accountNumber": "492152000047",
+          "serviceAddress": [
+            {
+              "address": "2085 LAKESHORE DR APT 3",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [],
+          "accountInlineMessages": [],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "0.00",
+            "dueDate": "",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": " - ",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "currentBill": "0",
+                "averageElectric": 0,
+                "averageGas": 0
+              }
+            },
+            "billId": "0"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": " - ",
+              "billAmount": {
+                "amount": "0"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "electric",
+                    "unit": "KWH",
+                    "amount": ""
+                  },
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": ""
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": ""
+              }
+            },
+            "lastMonth": {},
+            "lastYear": {}
+          }
+        },
+        {
+          "accountNumber": "492152000054",
+          "serviceAddress": [
+            {
+              "address": "1966 LETART AVE",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [],
+          "accountInlineMessages": [],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "0.00",
+            "dueDate": "",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": " - ",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "currentBill": "0",
+                "averageElectric": 0,
+                "averageGas": 0
+              }
+            },
+            "billId": "476156202"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": " - ",
+              "billAmount": {
+                "amount": "0"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "electric",
+                    "unit": "KWH",
+                    "amount": ""
+                  },
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": ""
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": ""
+              }
+            },
+            "lastMonth": {},
+            "lastYear": {}
+          }
+        },
+        {
+          "accountNumber": "492152000062",
+          "serviceAddress": [
+            {
+              "address": "2550 CROZIER AVE",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [],
+          "accountInlineMessages": [],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "0.00",
+            "dueDate": "",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": " - ",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "currentBill": "0",
+                "averageElectric": 0,
+                "averageGas": 0
+              }
+            },
+            "billId": "0"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": " - ",
+              "billAmount": {
+                "amount": "0"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "electric",
+                    "unit": "KWH",
+                    "amount": ""
+                  },
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": ""
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": ""
+              }
+            },
+            "lastMonth": {},
+            "lastYear": {}
+          }
+        },
+        {
+          "accountNumber": "492152000070",
+          "serviceAddress": [
+            {
+              "address": "2485 MORTON AVE APT A",
+              "city": "MUSKEGON",
+              "state": "MI",
+              "zip": "49441"
+            }
+          ],
+          "statusBarMessages": [],
+          "accountInlineMessages": [],
+          "billingAddressMessage": {
+            "code": "",
+            "text": "",
+            "type": "",
+            "style": ""
+          },
+          "status": "ACTIVE",
+          "shutoffStatus": {
+            "status": "PASTDUE",
+            "depositAmount": "",
+            "dueDate": ""
+          },
+          "allowedPaymentTypes": [
+            "cash",
+            "card",
+            "cheque",
+            "online"
+          ],
+          "accountSummary": {
+            "totalAmountDue": "0.00",
+            "dueDate": "",
+            "totalPayments": "0.00",
+            "totalDueMessage": {
+              "text": "",
+              "type": "",
+              "style": ""
+            },
+            "summaryOfCharges": {
+              "dateRange": " - ",
+              "charges": {
+                "numberOfDays": "32",
+                "remainingCreditsPreviousBill": "12",
+                "pastDue": "0.00",
+                "currentBill": "0",
+                "averageElectric": 0,
+                "averageGas": 0
+              }
+            },
+            "billId": "353719562"
+          },
+          "billComparison": {
+            "currentMonth": {
+              "dateRange": " - ",
+              "billAmount": {
+                "amount": "0"
+              },
+              "usage": {
+                "data": [
+                  {
+                    "type": "electric",
+                    "unit": "KWH",
+                    "amount": ""
+                  },
+                  {
+                    "type": "gas",
+                    "unit": "CCF",
+                    "amount": ""
+                  }
+                ]
+              },
+              "billingPeriod": {
+                "numberOfDays": ""
+              }
+            },
+            "lastMonth": {},
+            "lastYear": {}
+          }
+        }
+      ]
+    }
+  },
+  "balanceDataPlan": {
+    "numberOfAccounts": 10,
+    "totalAmountDue": {
+      "prefix": "Total Amount",
+      "amount": 438.65,
+      "suffix": "",
+      "priorityLevel": 1
+    }
+  }
+}

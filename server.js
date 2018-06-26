@@ -2,6 +2,100 @@
 var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
+	
+	//my shit
+	
+	var session = require('express-session');
+	var jwt     = require('jsonwebtoken');
+	var path = require('path');
+	var favicon = require('serve-favicon');
+	var cookieParser = require('cookie-parser');
+	var bodyParser = require('body-parser');
+
+	var routes = require('./routes/index');
+	var login  = require('./routes/login');
+	var home  = require('./routes/home');
+	var reg  = require('./routes/register');
+	var portfolio  = require('./routes/portfolio');
+	var forgot_pass = require('./routes/forgot_pass');
+	var new_user_login = require('./routes/new_user_login');
+
+	var compliance_portal = require('./public/compliance_portal/routes/compliance_portal');
+	var marketing_app = require('./public/marketing_app/routes/marketing_app');
+	var fb_services = require('./public/fb_services/routes/fb_services');
+	var ecommerce_portal = require('./public/ecommerce_portal/routes/ecommerce_portal');
+	var gas_energy_intranet = require('./public/gas_energy_intranet/routes/gas_energy_intranet');
+	var uk_dvla_portal = require('./public/uk_dvla_portal/routes/uk_dvla');
+
+	var db = require('./db/db');
+
+
+	app.set('superSecret', 'porfolioSecret');
+	 
+	var checkSession = function(req, res, next) {
+	  var sess = req.session;
+	  var token = req.body.token || req.query.token || req.headers['x-access-token'] || req.params.token|| req.headers.authorization;
+	  if (token && sess.email){
+
+		// verifies secret and checks exp
+		jwt.verify(token, 'porfolioSecret', function(err, decoded) {      
+		  if (err) {
+			res.redirect('/error');    
+		  } else {
+			// if everything is good, save to request for use in other routes
+			req.decoded = decoded;
+		   if (decoded.email === sess.email){
+			  next();
+			}
+			else{
+			   res.redirect('/error'); 
+			}
+		  }
+		});
+
+	  } else {
+		  res.redirect( '/error'); 
+	  }
+	}
+	
+	app.use(morgan('dev'));
+	app.use(bodyParser.json());
+	app.use(bodyParser.urlencoded({ extended: false }));
+	app.use(cookieParser());
+	app.use(express.static(path.join(__dirname, 'public')));
+	app.use(session({secret: 'porfolioSecret', proxy: true, resave: true, saveUninitialized: true}));
+	/* try putting above and see session expired or not -->   ephemeral: true   */
+	app.use('/', routes);
+	app.use('/login', login);
+	app.use('/home', home);
+	app.use('/register', reg);
+	app.use('/forgot_pass', forgot_pass);
+	app.use('/new_user_login', new_user_login);
+	app.use('/portfolio/:token',[checkSession], portfolio);
+
+	// this are mapping of all portfolio
+	app.use('/compliance_portal/:token',[checkSession], compliance_portal);
+	app.use('/marketing_app/:token',[checkSession], marketing_app);
+	app.use('/fb_services/:token',[checkSession], fb_services);
+	app.use('/ecommerce_portal/:token',[checkSession], ecommerce_portal);
+	app.use('/gas_energy_intranet/:token',[checkSession], gas_energy_intranet);
+	app.use('/uk_dvla_portal/:token',[checkSession], uk_dvla_portal);
+
+// this is start for json server 
+
+var jsonServer = require('json-server');
+var server = jsonServer.create()
+server.use(jsonServer.defaults())
+var router = jsonServer.router('public/gas_energy_intranet/jsonResponses/single_acc_newformat.json');
+server.use(router)
+server.listen(4000);
+console.log("json listening in 4000");
+
+// this is end for json server 
+	
+	// my shit end
+	
+	
     
 Object.assign=require('object-assign')
 

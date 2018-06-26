@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/content.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.4.custom.css" />
+    <style>
+      .dbrd {
+        border-style: solid;
+      }
+    </style>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/backbone.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.js"></script>
+    <script src="js/utils.js"></script>
+
+  </head>
+  <body>
+  <!-- START - Right Nav -->
+	<div class="center-950px-block gutter-top container_WDT960PX PADDL0 no-padding-left no-padding-right page " >
+		<div class="column-container row leftNav_WDT240PX fRight">
+			<div id="sidebar" class="panel-group mleftnavhide">
+
+                 <section class="accordion-step panel brd10Btm">
+				    <div class="accordion-heading blubgColor row" data="" >
+				        <div class="col-xs-12 col-lg-12 col-md-12">
+				            <div class="accordion-label center-text">
+				                <span class="whiteColor font_18px">Try it <b>FREE</b></span>
+				            </div>							
+				        </div>
+					</div>
+					<div class="accordion-heading row" data="" >
+				        <div class="col-xs-12 col-lg-12 col-md-12">
+				            <div class="accordion-label MARL0PX">
+				                <span class="font_18px grayColor"><b>FREE</b> to post a product</span>
+				            </div>
+							<div class="accordion-label">
+				                <p class="font_12px grayColor lineHeight1 PADDDTB0EM MRG0"><b>Free</b> to post a product1 to post a product</p>
+								 <p class="font_12px grayColor PADDDTB0EM MRG0"><b>Free</b> to post a product1</p>
+								 
+								  <p class="font_12px grayColor PADDDTB0EM MRG0"><b>Free</b> to post a product1</p>
+								   <p class="font_12px grayColor PADDDTB0EM MRG0"><b>Free</b> to post a product1</p>
+				            </div>
+				        </div>
+					</div>					
+				</section>
+				<section class="accordion-step panel brd10Btm">
+				    <div class="accordion-heading blubgColor row" data="" >
+				        <div class="col-xs-12 col-lg-12 col-md-12">
+				            <div class="accordion-label center-text">
+				                <span class="whiteColor font_18px">Try it <b>FREE</b></span>
+				            </div>							
+				        </div>
+					</div>
+					<div class="accordion-heading row" data="" >
+				        <div class="col-xs-12 col-lg-12 col-md-12">
+				            <div class="accordion-label MARL0PX">
+				                <span class="font_18px grayColor"><b>FREE</b> to post a product</span>
+				            </div>
+							<div class="accordion-label">
+				                <p class="font_12px grayColor lineHeight1 PADDDTB0EM MRG0"><b>Free</b> to post a product1 to post a product</p>
+								 <p class="font_12px grayColor PADDDTB0EM MRG0"><b>Free</b> to post a product1</p>
+								 
+								  <p class="font_12px grayColor PADDDTB0EM MRG0"><b>Free</b> to post a product1</p>
+								   <p class="font_12px grayColor PADDDTB0EM MRG0"><b>Free</b> to post a product1</p>
+				            </div>
+				        </div>
+					</div>					
+				</section>
+								
+            </div>
+		</div>
+	<!-- END - Right Nav -->
+
+<!-- Start -eBill Paperless Billing Static Content -->
+    <div class="rootDiv panel column-right-content fLeft">
+      <section class=" margin-bottom-sm">
+        <div class="mcenter">
+          <div style="position: relative;display: inline-block; width: 100%;" class="PADDDB10PX">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 PADDINGCNT mfont_14px mtext-center">
+			  <h1 class="dte-michigan" ><span class="header-mobile-padding fontface-light fnt15pt">Post A Product</span></h1>
+            </div>
+          </div>
+		   <div class="row">
+				<div class="col-xs-12">
+					<div class="WDTH40"><hr class="linePosition" /></div>
+					<div class="center-text font_style_italic WDTH20" style="margin-top:-7px">Product Details</div>
+					<div class="WDTH40"><hr class="linePosition"/></div>
+				</div>
+		  </div>
+        </div>
+      </section>
+      <div class="PADDTB10PXLR15PX PADDB5PXMRGN5PX MRG0" style="margin-top: 5px;font: 14px Interstate-Light;position: relative;">
+        <div class="PADDL10PX PADDR20PX PADDB20PX mtext-center">
+			<div class="row">
+				<div class="PADDDLR5PX">
+					<div class="col-xs-12 col-sm-6 col-md-6" id="ff">
+						<label>Choose product category?</label>
+						<select class="form-control formfield_req" id="projectType" onchange="valNonEmpty(this);">
+							<option value="">Select Category...</option>
+							<option value="Starting My Service">Starting My Service</option>
+							<option value="Stopping My Service">Stopping My Service</option>
+							<option value="Getting service reconnected after a shutoff">Getting service reconnected after a shutoff</option>
+							<option value="Frequent Outages or Voltage Problems">Frequent Outages or Voltage Problems</option>
+							<option value="Home Protection Plus">Home Protection Plus (appliance repair)</option>
+							<option value="Need help paying my bill">Need help paying my bill</option>
+							<option value="Tree Trimming">Tree Trimming</option>
+							<option value="Incorrect Bill">Incorrect Bill</option>
+							<option value="Other">Other</option>
+						</select>
+						<span class="error" id="projectType_error">This is a required field.</span>
+					</div>
+				</div>
+			</div>
+        </div> 
+		<div class="PADDL10PX PADDR20PX PADDB20PX mtext-center">
+			<div class="row">
+				<div class="PADDDLR5PX">
+					<div class="col-xs-12 col-sm-6">
+						<label for="projectName">Provide a product name for contest :</label>
+						<input type="text" id="projectName" class="form-control formfield_req" onkeyup="valNonEmpty(this);">
+						<span class="error" id="projectName_error">This is a required field.</span>
+					</div>
+				</div>
+			</div>
+        </div>
+		<div class="PADDL10PX PADDR10 PADDB20PX mtext-center">
+			<div class="row">
+				<div class="PADDDLR5PX">
+					<div class="col-xs-12 col-sm-6">
+						<div class="my-form">
+							<p class="text-box PADDB20PX">
+								<label for="box1">Describe the product details :</label>
+								<span class="col-sm-12 col-xs-12 PADDDL0PX"><input type="text" name="boxes[]" value="" id="box1" class="form-control formfield_req"/></span>
+								<span class="col-sm-12 col-xs-12 MRGLTTXTRGT"><a class="add-box" href="javascript:void(0);"><img src="images/add.png" style="transform: rotateZ(135deg);"></a></span>
+							</p>
+						</div>
+						<!-- <label for="comments">Describe the product details :</label>
+						<textarea class="form-control formfield_req MRG0" id="details" rows="5" onkeyup="valNonEmpty(this);"></textarea>
+						<span class="error" id="complaints_error">This is a required field.</span> -->
+					</div>
+				</div>
+			</div>
+        </div>
+		<div class="PADDR20PX PADDB20PX mtext-center">
+			<div class="row">
+				<div class="PADDDLR5PX">
+					<div class="col-xs-12">
+						<div class="fileUpload btn btn-primary bgcgray">
+							<span><span class="glyphicons glyphicons-plus">+</span>&nbsp;Add files...</span>
+							<input type="file" name="upload" multiple="" class="upload"/>
+						</div>
+						<!-- span>Add files...</span>
+						<input type="file" name="upload[]" multiple="" value="Add Files" class="grayColor POSRELINBLK"/> -->
+					</div>
+				</div>
+			</div>
+        </div>
+		<div class="row PADDL10PX">
+			<div class="col-sm-8">
+				<div class="row MRGLR2PX12PX brd" style="border-right:0;padding: 21.5px 0px 21.5px 10px;">
+					<div class="input-group col-sm-4 fLeft PADL0R10PX">
+					   <span class="input-group-addon">&#x20b9;</span>
+					   <input type="text" class="form-control">
+				    </div>
+				    <div class="col-sm-2 fLeft PADL0R10PX">
+						<select class="form-control formfield_req PADLR3PX" id="projectType" onchange="valNonEmpty(this);">
+							<option value="">INR</option>
+							<option value="">USD</option>
+							<option value="">EUR</option>
+						</select>
+					</div>
+					<div class="input-group col-sm-3 fLeft PADL0R10PX">
+					   <span class="input-group-addon">Qty</span>
+					   <input type="text" class="form-control">
+				    </div>
+					<div class="input-group col-sm-3 fLeft  PADL0R10PX">
+					   <select class="form-control formfield_req PADDLR7PX" id="measurement" onchange="valNonEmpty(this);">
+							<option value="">Ton</option>
+							<option value="">Gram</option>
+						</select>
+				    </div>
+				</div>
+			</div>
+			<div class="col-sm-4 PADDR20PX">
+				<div class="price978547 PADDDB10PX PADDT10PX">	
+					<p class="center-text"><strong>Good Results</strong></p>
+					<p class="center-text PADDDTB0EM">Expect around 1 to 80 entries</p>
+				</div>
+			</div>
+		</div>
+		<div class="PADDL10PX PADDR20PX PADDB20PX mtext-center">
+			<div class="row">
+				<div class="PADDL10PX PADDDTBPXX">
+					<div class="PADDDB5PX">Run your contest for :</div>
+					<div class="col-xs-12 col-sm-2 PADDDL0PX">
+						<div class="input-group">
+						   <input type="number" class="form-control" max="30" min="3" value="3">
+						   <span class="input-group-addon">Days</span>
+					    </div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<label>Select between 3 to 30 days</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="PADDL10PX PADDDTBPXX">
+					<div class="PADDB20PX col-md-12 col-lg-12 col-sm-12 MRGAUTO mPDGB30PX textCenterRight">
+					  <span class="font_28px">Total : <span>&#x20b9;15,000</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="PADDL10PX PADDDTBPXX">
+					<div class="PADDB20PX col-md-12 col-lg-12 col-sm-12 MRGAUTO mPDGB30PX text-center">
+					  <input type="button" value="Submit" id="postAProductBtn" class="text-center rootDivBtn">
+					</div>
+				</div>
+			</div>
+			
+        </div>
+		
+      
+		
+		<!-- END -- eBillPaperless Billing Modal Secion -->
+      </div>
+    </div>
+<!-- End -eBill Paperless Billing Static Content -->
+	</div>
+    <script src="js/script.js"></script>
+    <script src="js/application_script.js"></script>
+  </body>
+</html>

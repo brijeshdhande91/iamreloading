@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../gas_energy_intranet/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../gas_energy_intranet/css/content.css">
+    <link rel="stylesheet" type="text/css" href="../../gas_energy_intranet/css/currentbill.css">
+    <link rel="stylesheet" type="text/css" href="../../gas_energy_intranet/css/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="../../gas_energy_intranet/css/jquery-ui-1.10.4.custom.css">
+    <style>
+      .dbrd {
+        border-style: solid;
+      }
+    </style>
+    <script src="../../gas_energy_intranet/js/jquery-1.10.2.js"></script>
+    <script src="../../gas_energy_intranet/js/underscore.js"></script>
+    <script src="../../gas_energy_intranet/js/backbone.js"></script>
+    <script src="../../gas_energy_intranet/js/bootstrap.min.js"></script>
+    <script src="../../gas_energy_intranet/js/jquery-ui-1.10.4.custom.js"></script>
+    <script src="../../gas_energy_intranet/js/utils.js"></script>
+
+  </head>
+  <body>
+    <% include ../portfolio_header.html %>
+    <% var accountIndex= 0; %>
+    <div class="center-950px-block gutter-top container_WDT960PX">
+         <div class="column-container row">
+             <div class="column-leftnav no-padding-right hidden-mobile leftNav_WDT240PX" id="leftCol">
+
+<!-- ************************************************************
+                  START - Balance Amount - Leftnav
+     ************************************************************ -->
+
+
+<div class="panel text-center balanceBlock mleftnavhide" style="margin-bottom:10px">
+   <script type="text/template" id="balanceAmtWidgetTemp">
+       <div  style="<%=balanceData.totalAmountDue.priorityLevel == 0 ? 'color:#4AA847':''%>">
+
+  <div class="PADDT40PXB30PXLR15PX leftNav_height mPDGB20PX">
+        <% if(balanceData.totalAmountDue.amount == 0){%>
+        <h5 class="font_1em text-center" style="color:#4AA847">You're all set!</h5>
+        <h5 class="font_1em text-center" style="color:#4AA847">Total Amount Due</h5>
+        <% } else {%> 
+        <h5 class="font_1em <%=(balanceData.totalAmountDue.priorityLevel == 0 ? '':'dte-michigan')%> text-center"><%= balanceData.totalAmountDue.prefix %></h5>
+        <% } %>
+        <h1 class="leftnav_price <%=balanceData.totalAmountDue.priorityLevel == 0 ? '':'dte-michigan'%>">$<%=balanceData.totalAmountDue.amount %></h1><div class="text-center">
+        <%if(balanceData.totalAmountDue.dueDate ){ 
+          if( new Date(balanceData.totalAmountDue.dueDate) >= new Date()){%>
+              <small><%= balanceData.totalAmountDue.suffix %></small><br/>
+              <span class="bluColor <%=(balanceData.totalAmountDue.priorityLevel == 0 ? '':'dte-michigan')%>"><%=balanceData.totalAmountDue.dueDate%></span></div>
+          <%}else{%>
+              <span>Due</span><br/>
+              <span <%=balanceData.totalAmountDue.priorityLevel == 0 ? 'style="#4AA847"':'class="bluColor dte-michigan"'%>>Immediately</span>
+          <%}%>
+        <%}%>
+        <%if(balanceData.totalAmountDue.amount == 0){%>
+          <span class=""></span><br/>
+          <small class="font_1em text-center" style="color:#4AA847">Future Payments</small>
+          <span class="infoIcon infoIconalign hnd" data-toggle="popover" data-placement="right" data-content="Future payments will be used to reduce the amount due on your next billing statement." style="margin-left:25px" ></span>
+        <%}%> 
+        
+    </div>
+  </div>
+</div>
+      <%if(balanceData.numberOfAccounts < 6)%>
+      <input onClick="" style="height: 45px;  font-size: 1.2em;color:#fff;" type="button"
+       value='<%=(balanceData.totalAmountDue.priorityLevel == 0 ? "Make Future Payments":"Pay Now")%>' class='<%=(balanceData.totalAmountDue.priorityLevel == 0 ? "btnGreen":"btnBlue")%>' />
+ </script>
+   </div>
+
+<!-- ************************************************************
+                  END - Balance Amount - Leftnav
+     ************************************************************ -->
+
+
+                 <div id="sidebar" class="panel-group mleftnavhide">
+<!-- ************************************************************
+                  START - Left Nav -2
+     ************************************************************ -->
+                 <section class="accordion-step panel">
+    <!--  //remove collapsed style for active selection -->
+    <div class="accordion-heading collapsed row" data="" >
+        <div class="col-xs-12 col-lg-12 col-md-12">
+            <div class="accordion-label">
+
+
+                <a href="/gas_energy_intranet/<%=token%>">Current Bill - Electric & Gas</a>
+
+            </div>
+        </div>
+</div></section>
+
+<section class="accordion-step panel">    <!--  //remove collapsed style for active selection -->
+    <div class="accordion-heading collapsed row" data="" >
+        <div class="col-xs-12 col-lg-12 col-md-12">
+            <div class="accordion-label">
+
+
+                <a href="/gas_energy_intranet/<%=token%>/payment_plan">CCurrent Bill - Gas</a>
+
+            </div>
+        </div>
+</div></section><section class="accordion-step panel">    <!--  //remove collapsed style for active selection -->
+    <div class="accordion-heading collapsed row" data="" >
+        <div class="col-xs-12 col-lg-12 col-md-12">
+            <div class="accordion-label">
+
+
+                <a href="#">Current Bill Multiple Accounts</a>
+
+            </div>
+        </div>
+</div></section>
+
+
+
+                     
+<style type="text/css">
+
+.chat-image{
+            background-repeat: no-repeat;
+            height:68px;
+            width:230px;
+            display:none;
+}
+
+</style>
+
+                 </div>
+             </div>
+
+
+    <!-- ************************************************************
+                  END - Left Nav -2
+     ************************************************************ -->
+
+
+
+<div id="main-section" class="column-right-content">
+
+    <section class="panel hidden no-padding-left no-padding-right" id="bannerMessage"></section>
+    <section class="panel margin-bottom-sm">
+    <div class="header-container">
+       <div class="col-xs-12 underline-row">
+           <div id="showMobileNav" class="no-padding-left no-padding-right col-xs-12">
+               <h1 class="dte-michigan"><span class="header-mobile-padding fontface-light">Current Bill</span><span class="chevron-down-blue right hidden hidden-desktop margin-right-sm mobile-header-caret"></span><span class="chevron-up-blue right hidden-desktop margin-right-sm mobile-header-caret"></span></h1>
+           </div>
+             <div class="col-xs-12 col-md-3 no-padding-right hidden" id="leftColMobile">
+                 <div id="sidebarMobile" class="panel-group">
+                 <section class="accordion-step panel">
+    <!--  //remove collapsed style for active selection -->
+    <div class="accordion-heading collapsed row" data="" >
+        <div class="col-xs-12 col-lg-12 col-md-12">
+            <div class="accordion-label">
+
+
+                <a href="">Current Bill</a>
+
+            </div>
+        </div>
+          </div></section><section class="accordion-step panel">    <!--  //remove collapsed style for active selection -->
+              <div class="accordion-heading collapsed row" data="" >
+                  <div class="col-xs-12 col-lg-12 col-md-12">
+                      <div class="accordion-label">
+
+
+                          <a href="">Billing &amp; Payment History</a>
+
+                      </div>
+                  </div>
+          </div></section><section class="accordion-step panel">    <!--  //remove collapsed style for active selection -->
+              <div class="accordion-heading collapsed row" data="" >
+                  <div class="col-xs-12 col-lg-12 col-md-12">
+                      <div class="accordion-label">
+
+
+                          <a href="">Billing &amp; Payment Programs</a>
+
+                      </div>
+                  </div>
+          </div></section><section class="accordion-step panel">    <!--  //remove collapsed style for active selection -->
+              <div class="accordion-heading collapsed row" data="" >
+                  <div class="col-xs-12 col-lg-12 col-md-12">
+                      <div class="accordion-label">
+
+                          Rates
+
+
+                      </div>
+                  </div>
+               <div class="mobile-expander-adjust expand btn-sm accordion-value right" data-toggle="collapse" data-parent="#sidebar" href="#expander-target" name="expander" style="padding-left:10px">
+                   <span class="chevron-down-blue left"></span>
+                   <span class="chevron-up-blue left" style="display: none;"></span>
+               </div>
+          </div>
+          <div name="expander-target" class="panel-collapse collapse accordion-body"><div class="accordion-sublabel" data="">
+               <a href="">About Rates</a>
+          </div>
+
+          <div class="accordion-sublabel" data="">
+               <a href="">Rate Programs</a>
+          </div>
+
+          </div></section><section class="accordion-step panel">    <!--  //remove collapsed style for active selection -->
+              <div class="accordion-heading collapsed row" data="" >
+                  <div class="col-xs-12 col-lg-12 col-md-12">
+                      <div class="accordion-label">
+
+
+                          <a href="">Meters</a>
+
+                      </div>
+                  </div>
+          </div></section>
+
+
+
+  <section class="panel col-lg-12">
+<div class="col-lg-10 affix-bottom">
+                             <!-- START eGain chat icon panel for pages with no left nav -->
+
+<style type="text/css">
+
+/*#chat-available{
+            background-image: url(/wps/wcm/myconnect/726fe81f-f9f9-4fb7-be0b-e3db8f37c813/click-to-chat-icon-active.png?MOD=AJPERES&amp;CACHEID=726fe81f-f9f9-4fb7-be0b-e3db8f37c813);
+            cursor: pointer;
+}
+
+#chat-unavailable{
+            background-image: url(/wps/wcm/myconnect/bba2d582-f282-4d8d-aa09-c0576710e466/click-to-chat-icon-inactive.png?MOD=AJPERES&amp;CACHEID=bba2d582-f282-4d8d-aa09-c0576710e466);
+}*/
+
+.chat-image{
+            background-repeat: no-repeat;
+            height:68px;
+            width:230px;
+            display:none;
+}
+
+</style>
+<!-- START eGain chat icon panel for pages with no left nav -->
+
+<div class="chat-image" id="chat-available" style="display: block;position: relative;margin: 0 auto;" onclick="openHelp()">&nbsp;</div>
+                         </div>
+                     </section>
+
+                 </div>
+             </div>
+       </div>
+   </div>
+</section>
+
+
+<link rel="stylesheet" title="" href="" type="text/css" />
+
+<!-- Current Bill Main Content components -->
+<div class="col-md-9 PADDL0 no-padding-left no-padding-right page cbill" style="width:100%">
+ <div  id="pageTarget" ></div></div>
+<script type="text/template" id="currentBillTemp">
+
+
+  <div class="panel PADDTB10PXLR15PX PADDB5PXMRGN5PX"><!-- Testing Push -->
+
+     <!-- ************************************************************
+                  START - Account Info
+           ************************************************************ -->
+              <div class="row PADDTB10PX PADDB18PX">
+                  <div class="col-md-4 col-sm-4 mcurrentbill-accPDTB15PX accipad">
+                  
+                      <h4 class="margin-left-sm font_1_2em mcurrentbill-acc"><%= currentBillData.currentBillData.userProfile.name %></h4>
+                      <% if (currentBillData.currentBillData.accounts[accountIndex].serviceAddress.length <= 1) { %>
+                        <section class="mcurrentbill-acc"><%= currentBillData.currentBillData.accounts[accountIndex].serviceAddress[0].address + ', ' %> <br/>
+                        <div><%= currentBillData.currentBillData.accounts[accountIndex].serviceAddress[0].city +', ' + currentBillData.currentBillData.accounts[accountIndex].serviceAddress[0].state +', '+ currentBillData.currentBillData.accounts[accountIndex].serviceAddress[0].zip %></div>
+                        </section>
+                      <% } %>
+                  </div>
+                  <div class="col-md-8 col-sm-8 mcurrentbill-accnoPDB15PX accnoipad">
+                    <h4 class="font_1_2em mcurrentbill-accno">Account No.</h4>
+
+                      <section class="mcurrentbill-accno"><%= currentBillData.currentBillData.accounts[accountIndex].accountNumber %></section>
+                      <%if(currentBillData.currentBillData.accounts[accountIndex].status=="ACTIVE"){%> <br>
+                      <h6 class="underlineText"><a href="javascript:void(0);" id="switchAccountModalTrigger" title="Switch Account">Switch Account</a></h6>
+                      <h6 class="underlineText"><a href="javascript:void(0);" id="viewAllAccounts" title="Current Bill Summary">Current Bill Summary</a></h6>
+                      <%}%>
+
+                  </div>
+                </div>
+        <!-- ************************************************************
+              END - Account Info
+          ************************************************************ -->
+            </div>
+
+
+
+
+
+        <!-- ************************************************************
+          START - Banner Messaages
+        ************************************************************ -->
+          <section class="whiteBg MRGNB5PX mbanner-msg">
+                  <% currentBillData.currentBillData.accounts[accountIndex].statusBarMessages.forEach(function(statusBarMessage){%>
+                      <div class="<%= statusBarMessage.type %> brdBtm">
+                      <div class="PADDT5PXB10PX">
+                        <%= statusBarMessage.text%>
+                      </div>
+                    </div>
+                    <% });%>
+                  <%if(currentBillData.currentBillData.accounts[accountIndex].shutoffStatus && currentBillData.currentBillData.accounts[accountIndex].shutoffStatus.status=="SHUTOFF"){%>
+                <section class="text-center">
+                      <h6 class="PADDT10PX" style="font-size: 2em; color: black;">To restore service you need to pay your minimum amount of:</h6>
+                      <h2 class="PADDB20PX" style="font-size: 4.7em; color: black; "><%=currentBillData.currentBillData.accounts[accountIndex].shutoffStatus.depositAmount%></h2>
+                      <h4 style="font-size: 1.2em;color: black;padding-bottom: 35px; margin-bottom: 0px;">Please call 1-800-477-4747 to reactivate service</h4>
+                </section>
+                <%}%>
+          </section>
+      <!-- ************************************************************
+                END - Banner Messaages
+        ************************************************************ -->
+        <!-- ************************************************************
+              START - Mobile Balance Block
+           ************************************************************ -->
+<div id="MobileBalanceWidget" class="panel text-center  balanceBlockMobile totalAmnthide mPDGB30PX"></div>
+              <!-- ************************************************************
+                        END - Mobile Balance Block
+                ************************************************************ -->
+        <!-- ************************************************************
+              START - BWB and SPP Div
+           ************************************************************ -->
+   <div id="BWBandSPPBlock"></div>
+
+        <!-- ************************************************************
+              END - BWB and SPP Div
+           ************************************************************ -->
+
+   <!-- ************************************************************
+               START - Summary Of Charges
+        ************************************************************ -->
+            <div class="panel PADDTB10PXLR15PX PADDB5PXMRGN5PX">
+                <section class="text-center msummaryofcharges">
+                  <h4 class="PADDT10PX">Summary of Charges: </h4>
+
+
+                      <h4 class="PADDB20PX mPADB10PX"><%= currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.dateRange %></h4>
+                      <div class="row">
+                        <div class="col-md-12 brdBtm"></div>
+                      </div>
+
+                </section>
+                <div class="row">
+                  <div class="col-md-6 text-center brdRgt WDTIPAD_pieCHT">
+                    <div id="piechart" class="mpiechart">
+                      <div id="inforate"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 text-center  billingdays_height WDTIPAD_pieCHT">
+                    <section class="date">
+                      <aside class="brd billingdays_text">
+                        <h5 class="billing-Period-Text">Billing Days</h5>
+                      </aside>
+                      <aside class="brd bluColor">
+                          <%=currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.numberOfDays %>
+                      </aside>
+                    </section>
+                    <h5 class="MRGT10PX lineheight0_75 avrg_PDG">Average Daily Charges</h5>
+                    <table class="table billing_days MRGT10PX">
+                      <% var gasAvailable = (currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.gas!=="" 
+                      && currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.gas);
+                          var elecAvailable = (currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.electric!=="" && currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.electric);
+                       %>
+
+                        <% if (currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.gas!=="" && currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.gas){ %>
+                        <tr>
+                          <td class="bluColor charges rmbrd text-left brdBtm avrg_cm1">
+                            $<%= currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.averageGas %>
+                          </td>
+                          <td class="rmbrd text-right bluColor brdBtm vamiddle lineheight0_75">Gas</td>
+                        </tr>
+                        <% } %>
+                      <% if (currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.electric!=="" && currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.electric){ %>
+                      <tr>
+                        <td class="bluColor charges  text-left avrg_cm2">
+                            $<%= currentBillData.currentBillData.accounts[accountIndex].accountSummary.summaryOfCharges.charges.averageElectric %>
+                        </td>
+                        <td class="text-right bluColor vamiddle lineheight0_75">Electric</td>
+                      </tr>
+                       <% } %>
+                    </table>
+                  </div>
+                </div>
+
+
+        <!-- ************************************************************
+              END - Summary Of Charges
+        ************************************************************ -->
+        <!-- ************************************************************
+              START - Bill Comparison Div
+        ************************************************************ -->
+          <div id="billCompareBlock"></div>
+        <!-- ************************************************************
+              END - Bill Comparison Div
+        ************************************************************ -->
+        <!-- ************************************************************
+              START - Switch Account
+        ************************************************************ -->
+        <div id="switchAccountModalTarget"></div>
+        <!-- ************************************************************
+              END - Switch Account
+        ************************************************************ -->
+</script>
+
+<!-- ************************************************************
+              START - Multiple Accounts Template
+        ************************************************************ -->
+   <script type="text/template" id="currentBillMultipleTemp">
+            <div class="panel PADDTB10PXLR15PX">
+
+
+              <div class="row PADDTB10PX">
+                  <div class="col-md-12">
+                     
+                      <h4 class="margin-left-sm font-size-20-xs mcurrentbill-acc"><%= currentBillData.currentBillData.userProfile.name %></h4>
+                    
+                  </div>
+
+                </div>
+            </div>
+     
+           <div id="MobileBalanceWidget" class="panel text-center  balanceBlockMobile totalAmnthide mPDGB30PX"></div>
+              <article id="togleairticle" class="whiteBg summaryInfo toggleHeader selectedAcc eleNone hnd mtoggleH PADDT10PXMACC">
+                <div class="frmTbl mobwhite">
+                  <div class="frmRow brdNone">
+                    
+                        <div class="text-left PL15TB4R0 multiPayBtnSec"><h5 class="mobTXTblue"><span class="tglIcon mexpand-icon expand-icon MRGT20PX" id="togleicon"></span><span class="lblalg"><span class="noAcc"></span class="mWDT100"> Bills Selected:</span><span class="additionVal MRGL10PX mWDT100 mobTXTblue"></span></h5>
+
+            </div>
+                        <div class="frmCell text-right PADDR15PX mFLTR mBRD0 mPDGT20pxB30px payseletedbills pay_selected_bill payBtntTop">
+                          <input onclick="javascript:window.openPaymentCenterSelectedBills()" id="payseletedbilltop" type="button" value="Pay Selected Bills" class="btnBlue payBillBtn  payBtn mPDNG10  mobbtndisp" />
+              <div class="errorTXT eleNone" id="errorMSG"> The maximum number of payments you can make is five. </div>
+                        </div>
+            <div class="frmCell text-right PADDR15PX mFLTR mBRD0 mPDGT20pxB30px hidden  makefuturepayments futurebtntTop" >
+              <input onclick="javascript:window.openPaymentCenterSelectedBills()" type="button" id="makeFuturePayBtnTop" value="Make Future Payments" class="btnBlue payBillBtn  payBtn mPDNG10 makefuturepayment  mobbtndisp"/>
+              <div class="errorTXTMFP eleNone" id="errorMSG1"> The maximum number of payments you can make is five. </div>
+                        </div>
+                     
+                    </div>
+                  </div>
+                </article>
+                <article class="whiteBg summaryInfo toggle eleNone MRGT10PX mMultiAccdhide">
+                  <div class="selAddr"></div>
+                  <div class="frmTbl selectedBill">
+                    <div class="frmRow">
+                      
+                        <div class="frmCell text-left PADDL15PX">
+                          <span class="noAcc topN10PX"></span> <label class="topN10PX"> Bills Selected:</label><span class="additionVal MRGL10PX"> </span>
+                        </div>
+                      
+                      <div class="frmCell text-right PADDR15PX pay_selected_bill paybtnmTop" id="payseletedbillt">
+                        <input type="button" id="payseletedbilltt" onclick="javascript:window.openPaymentCenterSelectedBills()" value="Pay Selected Bills" class="btnBlue MRGR15PX"/>
+            <div class="errorTXTIN eleNone" id="errorMSG2"> The maximum number of payments you can make is five. </div>
+                      </div>
+            <div class="frmCell text-right PADDR15PX hidden makefuturepayments futurebtnmTop" id="makefuturepaymentt">
+                       <input type="button" id="makeFuturePayBtn" onclick="javascript:window.openPaymentCenterSelectedBills()" value="Make Future Payments" class="btnBlue MRGR15PX  makefuturepayment"/>
+             <div class="errorTXTINMFP eleNone" id="errorMSG3"> The maximum number of payments you can make is five. </div>
+                     </div>
+                    </div>
+                  </div>
+                </article>
+               <section class="panel PADDTB10PXLR15PX MRGT10PX mMRGT5PX">
+                <%if(currentBillData.currentBillData.accounts.length > 5) { %>
+                <article class="">
+                  <div class="row brdBtm PADDT10B20PXPX ">
+                    <div class="col-md-6 col-sm-6 text-left mtext-center ipadcenter">
+                      <input type="text" id="srchVal" />
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-left mPDT10PX mtext-center ipadcenter">
+                      <input type="button" value="Search" class="btn-primary" id="srch"/>
+                      <a  class="reset btn-link">Reset</a>
+                    </div>
+                  </div>
+                </article>
+                <%}%>
+                <article class="MRGT10PX">
+        <section class="multiSortTap">
+            <%if(currentBillData.currentBillData.accounts.length > 5) { %>
+            <div class="row brdBtm mobliehs">
+            <div class="col-md-12 text-right sort PADDR20PX MRGT10PXB20PX mFLTLT">
+              <label class="orderBy">Order by:</label>
+              <ul class="fRight">
+              <li id="sort_amtDue">Amount Due<span class=""></span></li>
+              <li id="sort_date">Due Date<span class=""></span></li>
+              <li id="sort_account">Account<span class=""></span></li>
+              <li id="sort_address">Service Address<span class=""></span></li>
+              </ul>
+            </div>
+            </div>
+            <%}%>
+          </section>
+          <%if(currentBillData.currentBillData.accounts.length > 5) { %>
+          <section class="multiSortSelection row brdBtm PADDT10PXB20PX">
+            <div>
+              <h5 class="fLeft col-xs-6 text-center">Order by</h5>
+              <select class="fLeft col-xs-6 multiAccSorting">
+                <option value="amountDueHtoL">Amount Due(high to low)</option>
+                <option value="amountDueLtoH">Amount Due(low to high)</option>
+                <option value="dueDateLtoH">Due Date(low to high)</option>
+                <option value="dueDateHtoL">Due Date(high to low)</option>
+                <option value="accountLtoH">Account(low to high)</option>
+                <option value="accountHtoL">Account(high to low)</option>
+                <option value="serviceAddressLtoH">Service Address(low to high)</option>
+                <option value="serviceAddressHtoL">Service Address(high to low)</option>
+              </select>
+            </div>
+          </section>
+          <%}%>
+          <%if(currentBillData.currentBillData.accounts.length > 5 ) {%>
+            <div class="bluColor PADDTB13PX">Please note, the maximum number of accounts that can be selected and paid at one time is FIVE.</div>
+            <hr class="linePos linewidth"></hr>
+          <%}%>
+                  <article class="multiAccounts">
+                   
+
+                      <% for(var items in currentBillData.currentBillData.accounts) { %>
+                        <div class="summaryInfo toggleHeader accountsRow" id="multiAccountDetails">
+                        <% var x= currentBillData.currentBillData.accounts[items].accountInlineMessages.length;
+                           if(x > 0){
+                            if (currentBillData.currentBillData.accounts[items].accountInlineMessages[0].type == "IL_PastDueL2StsMsg"){
+                                   var  y = "brdRedRgt";
+                            }else if(currentBillData.currentBillData.accounts[items].accountInlineMessages[0].type == "IL_PastDueL1StsMsg"){
+                                   var  y = "brdOrgRgt";
+                            }else {
+                             var y = "";
+                            }
+                           }
+                         %>
+                         <div class="row brdBtm <%= ((x > 0) ? y : "" )%>">
+                            <div class="col-md-6 col-sm-6 text-left">
+                              <span class="tglIcon expand-icon MRGR20PX MRGT15PX"></span>
+                              <section class="addressSec">
+
+                                <span class="address">
+                                <%= currentBillData.currentBillData.accounts[items].serviceAddress[0].address %>,
+                                <%= currentBillData.currentBillData.accounts[items].serviceAddress[0].city %>,
+                                <%= currentBillData.currentBillData.accounts[items].serviceAddress[0].state %>,
+                                <%= currentBillData.currentBillData.accounts[items].serviceAddress[0].zip %><br/>
+                                </span>
+                                <span class="bluColor">Account No.</span>
+                                <span class="acNo"><%= currentBillData.currentBillData.accounts[items].accountNumber %></span>
+               </section>
+                            </div>
+              <div class="col-md-1 text-right multichkbx">
+                              <span class="customChkBox "><input type="checkbox" class="chkBox" id="<%= items %>"/></span>
+                            </div>
+                            <div class="col-md-5 text-right DueMsgSection mMultiAccAmt">
+                              <span class="amtDue <%= ((currentBillData.currentBillData.accounts[items].accountInlineMessages.length > 0)? currentBillData.currentBillData.accounts[items].accountInlineMessages[0].type : "" )%> ">$<%= currentBillData.currentBillData.accounts[items].accountSummary.totalAmountDue %></span>
+                              <% for(var count=0; count < currentBillData.currentBillData.accounts[items].accountInlineMessages.length; count++  ) { %>
+                                <div class="<%= ((currentBillData.currentBillData.accounts[items].accountInlineMessages.length > 0)? currentBillData.currentBillData.accounts[items].accountInlineMessages[count].type : "" )%> <%= ((currentBillData.currentBillData.accounts[items].accountInlineMessages[count].code == "PAY0106") ? "greencheck" : "" )%>"> <%= currentBillData.currentBillData.accounts[items].accountInlineMessages[count].text %></div>
+                              <%}%>
+                <div id="dueDateSection" class="dueDateSection eleNone"><span class="dateSection"><%=currentBillData.currentBillData.accounts[items].accountSummary.dueDate%></span></div>
+                            </div>
+
+                          </div>
+                      </div>
+
+                      <article class="summaryInfo toggle eleNone MRGT10PX accList">
+                        <div class="row brdNone pastDueMsg multiAccSummarySec">
+                          <div class="col-md-12">
+                           <% for(var count=0; count < currentBillData.currentBillData.accounts[items].accountInlineMessages.length; count++  ) { %>
+                                <section class="MRGB10PX">
+                                 <div class="<%= ((currentBillData.currentBillData.accounts[items].accountInlineMessages.length > 0)? currentBillData.currentBillData.accounts[items].accountInlineMessages[count].type : "" ) %> <%= ((currentBillData.currentBillData.accounts[items].accountInlineMessages[count].code == "PAY0106") ? "greencheck" : "" )%>">
+                                  <div class="PADDT5PXB10PX">
+                                    <%=currentBillData.currentBillData.accounts[items].accountInlineMessages[count].text %>
+                                  </div>
+                                </div>
+                              </section>
+                              <% } %>
+                          </div>
+
+                        </div>
+                        <div class="row brdBtm multiAccSummarySec">
+                            <div class="WDTH60 mWDT100">
+                              <h4 class="PADDT10PX text-center multiAccSumarry">Summary of Charges:</h4>
+                              <h4 class="PADDB10PX text-center multiAccSumarry"><%= currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.dateRange %></h4>
+                            </div>
+                            <div class="frmTbl oflwHidden MRGT10PX WDTH96 mrgCenter">
+                              <div class="frmRow">
+                                <div class="frmCell WDTH60 vTop brdNone mcenter">
+                                  <% if(currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.electric!="" && currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.electric){ %>
+                                  <div class="row brdBtm electric fnt1EM">
+                                    <div class="col-md-6 col-sm-6 PADDL46PX mWTD65">
+                                      Electric:
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right mWTD35">
+                                      <%= currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.electric %>
+                                    </div>
+                                  </div>
+                                <% } %>
+                                <% if(currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.gas!="" && currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.gas){ %>
+                                  <div class="row brdBtm gas fnt1EM">
+                                    <div class="col-md-6 col-sm-6 PADDL46PX mWTD65">
+                                      Gas:
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right mWTD35">
+                                      <%= currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.gas %>
+                                    </div>
+                                  </div>
+                                <% } %>
+                                <% if(currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.other!="" && currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.other){ %>
+                                  <div class="row brdBtm other fnt1EM">
+                                    <div class="col-md-6 col-sm-6 PADDL46PX mWTD65">
+                                      Services & Fees:
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right mWTD35">
+                                      <%= currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.other %>
+                                    </div>
+                                  </div>
+                                <% } %>
+                                <% if(currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.currentBill!="" && currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.currentBill){ %>
+                                  <div class="row currentBill fnt1EM ">
+                                    <div class="col-md-6 col-sm-6 PADDL46PX mWTD65">
+                                      Current Bill:
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right mWTD35">
+                                      <%= currentBillData.currentBillData.accounts[items].accountSummary.summaryOfCharges.charges.currentBill %>
+                                    </div>
+                                  </div>
+                                <% } %>
+                                <div class="text-center MRGT15PX MRGB10PX">
+                                  <input type="button" value="View Current Bill" onClick="changebtn()" data-accountindexnum="<%= items%>" class="btn-primary multipleAccountViewBill"/>
+                                </div>
+                                </div>
+
+                                <div class="frmCell text-center brdNone vTop mcenter">
+                                  <label class="fnt1-4EM">Total Amount Due:</label><br/>
+                                  <h3 class="fnt3-31EM totalAmt"><%= currentBillData.currentBillData.accounts[items].accountSummary.totalAmountDue %></h3>
+                                  <div class="text-center MRGT10PX">
+                  <%if(currentBillData.currentBillData.accounts[items].accountSummary.totalAmountDue == 0) { %>
+                    <input onclick="javascript:window.openPaymentCenter('<%= currentBillData.currentBillData.accounts[items].accountNumber %>','<%=currentBillData.currentBillData.accounts[items].accountSummary.totalAmountDue %>')" type="button" value="Make Future Payments" class="btnBlue WDTH200PX MRGR20PX mblubut makefuturepayment"/>
+
+                   <%}else{%>
+                    <input onclick="javascript:window.openPaymentCenter('<%= currentBillData.currentBillData.accounts[items].accountNumber %>','<%=currentBillData.currentBillData.accounts[items].accountSummary.totalAmountDue %>')" type="button" value="Pay Now" class="btnBlue WDTH200PX MRGR20PX mblubut"/>
+                   <%}%>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </article>
+                      <% } %>
+                
+                  </article>
+
+                </article>
+              </section>
+             
+                <% if(currentBillData.currentBillData.accounts.length>5){ 
+          var count=0;
+          for(i=0;i<currentBillData.currentBillData.accounts.length;i++){
+            if(currentBillData.currentBillData.accounts[i].accountSummary.totalAmountDue!=0){count++;}
+          }%>
+                  <div class ="text-right MRGT10PX">
+                    <h6 class="MRGT10PX MRGR20PX MRGB10PX"><a href="#" class="returnTop underline">Return to top</a></h6>
+                  </div>
+          <%if(count!=0){%>
+            <div class="fRight MRGR15PX MRGB10PX payseletedbillb" id="payseletedbillb">
+              <div class="errorTXTDET eleNone" id="errorMSG4"> The maximum number of payments you can make is five. </div>
+            <input type="button" id="payseletedbillBottom" onclick="javascript:window.openPaymentCenterSelectedBills()" value="Pay Selected Bills" class="btnBlue MRGR20PX  payBtn mPDNG10 " disabled="disabled"/>
+            </div>
+          <%} if(count==0){%>
+            <div class="fRight MRGR15PX MRGB10PX " id="makeFutureBtnB">
+              <div class="errorTXTDETMFP eleNone" id="errorMSG5"> The maximum number of payments you can make is five. </div>
+            <input type="button"  onclick="javascript:window.openPaymentCenterSelectedBills()" value="Make Future Payments" class="btnBlue MRGR20PX  payBtn mPDNG10 makefuturepayment " disabled="disabled"/>
+            </div>
+
+          <% } %>
+        <div class="fRight MRGR15PX MRGB10PX hidden" id="makefuturepaymentb">
+            <div class="errorTXTDETMFP eleNone" id="errorMSG6"> The maximum number of payments you can make is five. </div>
+          <input type="button" id="makefuturepaymentbottom" onclick="javascript:window.openPaymentCenterSelectedBills()" value="Make Future Payments" class="btnBlue MRGR20PX  payBtn mPDNG10 makefuturepayment " disabled="disabled"/>
+        </div>
+        <%}%>
+              </section>
+              <div class="text-right MRGT10PX">
+
+              </div>
+          </script>
+
+          <!-- ************************************************************
+              END - Multiple Accounts Template
+        ************************************************************ -->
+
+
+<!-- ************************************************************
+              START - Bill Comarision Template
+        ************************************************************ -->
+
+
+          <!-- ************************************************************
+              END - Bill Comarision Template
+        ************************************************************ -->
+  <!-- ************************************************************
+              START - BWB and SPP Template
+        ************************************************************ -->
+
+
+          <!-- ************************************************************
+              END - BWB and SPP Template
+        ************************************************************ -->
+
+
+
+<!-- ************************************************************
+              START - Switch Account Model Template
+        ************************************************************ -->
+<script type="text/template" id="switchAccountModalTemp">
+<div class="modal" id="switchAccountModal" aria-hidden="false" aria-labelledby="addPaymentModalLabel" role="dialog" tabinde x="-1" >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <form class="form-horizontal" id="switchAccountModalSearchForm">
+        <div class="modal-header modal-header-width">
+          <button id="switchAccountModalCloseButton" class="close" aria-hidden="true" data-dismiss="modal" type="button">
+            <span class="icon-close"></span>
+          </button>
+          <h4 class="modal-title modal-title-width" style="color:#ffffff">Switch Account</h4>
+        </div>
+        <div class="modal-body modal-height padding-top-40-xs padding-right-10-xs padding-bottom-40-xs padding-left-10-xs">
+          <!-- search -->
+          <div id="switchAccountSearchModalDivDesktop" class="row margin-left-0-xs margin-right-0-xs padding-right-30-xs padding-left-30-xs">
+            <div class="row col-xs-6 margin-left-0-xs margin-right-0-xs no-padding-left no-padding-right">
+              <input name="search" class="form-control numeric width-100p-xs " id="switchAccountSearch" type="text" value="Search" placeholder="Search by account number or service address">
+            </div>
+            <div class="min-width-200px-xs col-xs-2">
+              <a href="javascript:void(0);" id="switchAccountSearchButton" class="btn dte-michigan-bkg width-100p-xs font-size-22-xs padding-top-sm padding-bottom-sm" >
+                Search
+              </a>
+            </div>
+            <div class="col-xs-2">
+              <a href="javascript:void(0);" id="switchAccountResetButton" class="btn dte-whiteMichigan-bkg width-100p-xs font-size-22-xs padding-top-sm padding-bottom-sm" >
+                Reset
+              </a>
+            </div>
+          </div>
+
+          <div id="switchAccountSearchModalDivMobile" class="row margin-left-0-xs margin-right-0-xs padding-right-30-xs padding-left-30-xs">
+
+
+
+            <div class="margin-left-0-xs margin-right-0-xs no-padding-left no-padding-right">
+              <input name="search" class="form-control numeric width-100p-xs switchAccountSearch" id="" type="text" value="search" placeholder="Search by account number or service address">
+            </div>
+            <div class="margin-left-0-xs margin-right-0-xs no-padding-left no-padding-right">
+              <div class="min-width-200px-xs col-xs-6">
+                  <a href="javascript:void(0);" id="" class="switchAccountSearchButton btn dte-michigan-bkg width-100p-xs font-size-22-xs padding-top-sm padding-bottom-sm" >
+                    Search
+                  </a>
+              </div>
+              <div class="col-xs-6">
+                  <a href="javascript:void(0);" id="switchAccountResetButton" class="btn dte-whiteMichigan-bkg width-100p-xs font-size-22-xs padding-top-sm padding-bottom-sm" >
+                    Reset
+                  </a>
+              </div>
+            </div>
+          </div>
+          <div id="accountsListing" class="row margin-top-30-xs margin-right-10-xs margin-left-0-xs ">
+            <% var count = 0; %>
+            <% currentBillData.currentBillData.accounts.forEach(function(account, key ){ %>
+              <% if(account.show){ %>
+                <% count++; %>
+                <% if( start < count && count <= end ){ %>
+                  <div class="row cursor-pointer margin-right-20neg-xs margin-bottom-0-xs margin-left-10neg-xs padding-top-20-xs padding-right-40-xs padding-bottom-20-xs padding-left-40-xs<% if( count == 1 ){ %> border-top-1-History-xs <% } %> border-bottom-1-History-xs selecting" data-account-number="<%= account.accountNum %>" data-accindex ="<%= key%>" >
+                    <div class="col-xs-12 margin-left-0-xs margin-right-0-xs no-padding-left no-padding-right" >
+                      <span class="text dte-michigan"><%= accountNumberLabel || "Account No." %></span>
+                      <%= account.accountNumber %>
+                    </div>
+                    <% account.serviceAddress.forEach(function( serviceAddress ){ %>
+                      <div class="col-xs-12 margin-left-0-xs margin-right-0-xs no-padding-left no-padding-right">
+                        <%= serviceAddress.address %> , <%= serviceAddress.city %>, <%= serviceAddress.state %> <%= serviceAddress.zip %>
+                      </div>
+                    <% }); %>
+                  </div>
+                <% } %>
+              <% } %>
+            <% }); %>
+            <% if( count == 0 ){ %>
+              <div class="row cursor-pointer margin-right-20neg-xs margin-bottom-0-xs margin-left-10neg-xs padding-top-20-xs padding-right-40-xs padding-bottom-20-xs padding-left-40-xs">
+                <div class="col-xs-12 margin-left-0-xs margin-right-0-xs no-padding-left no-padding-right">
+                  Oops, no result was found. Please search again.
+                </div>
+              </div>
+            <% } %>
+          </div>
+          <!-- indexes are zero offset display is one offset -->
+          <% var length = currentBillData.currentBillData.accounts.length,
+              page = 0,
+              perpage = 5,
+              start = page * perpage,
+              end = (page + 1) * perpage,
+              last = Math.ceil(length / perpage);%>
+          <% if( count >= 5 ){ %>
+            <div class="row margin-top-20-xs margin-right-0-xs">
+              <!-- next -->
+              <div class="width-20px-xs padding-left-10-xs float-right-xs font-size-28-1-xs dte-michigan text-align-left">
+                <% if( page == ( last - 1 )){ %>
+                  &rsaquo;
+                <% } else { %>
+                  <a href="javascript:void(0);" id="next" class="goToPage" data-page="<%= parseInt( page, 10 ) + 1 %>" >&rsaquo;</a>
+                <% } %>
+              </div>
+              <!-- display the last page -->
+              <% if( last - 1 > page ){ %>
+                <div class="width-20px-xs padding-left-10-xs float-right-xs font-size-16-32-xs text-align-center">
+                  <a href="javascript:void(0);" id="last" class="goToPage" data-page="<%= parseInt( last, 10 ) - 1 %>" ><%= parseInt( last, 10 ) %></a>
+                </div>
+              <% } %>
+              <!-- display the ellipsis to the right -->
+              <% if( last - 1 - page > 2 ){ %>
+                <div class="width-20px-xs padding-left-10-xs float-right-xs font-size-16-32-xs text-align-center dte-michigan">
+                  &hellip;
+                </div>
+              <% } %>
+              <!-- display the next page -->
+              <% if( last -1 - page > 1 ){ %>
+                <div class="width-20px-xs padding-left-10-xs float-right-xs font-size-16-32-xs text-align-center">
+                  <a href="javascript:void(0);" id="nextPage" class="goToPage" data-page="<%= parseInt( page, 10 ) + 1 %>" ><%= parseInt( page, 10 ) + 2 %></a>
+                </div>
+              <% } %>
+              <!-- display the current page -->
+              <div class="width-20px-xs padding-left-10-xs float-right-xs font-size-16-32-xs text-align-center dte-michigan font-underline"><%= parseInt( page, 10 ) + 1 %></div>
+              <!-- display the previous page -->
+              <% if( page > 1 ){ %>
+                <div class="width-20px-xs padding-left-10-xs float-right-xs font-size-16-32-xs text-align-center">
+                  <a href="javascript:void(0);" id="previous" class="goToPage" data-page="<%= parseInt( page, 10 ) - 1 %>" ><%= parseInt( page, 10 ) %></a>
+                </div>
+              <% } %>
+              <!-- display the ellipsis to the left -->
+              <% if( page > 2 ){ %>
+                <div class="width-20px-xs padding-left-10-xs float-right-xs font-size-16-32-xs text-align-center dte-michigan">
+                  &hellip;
+                </div>
+              <% } %>
+              <!-- display the first page -->
+              <% if( page > 0 ){ %>
+                <div class="width-20px-xs padding-left-10-xs float-right-xs font-size-16-32-xs text-align-center">
+                  <a href="javascript:void(0);" id="first" class="goToPage" data-page="0" >1</a>
+                </div>
+              <% } %>
+              <!-- Previous -->
+              <div class="width-20px-xs float-right-xs text-align-right font-size-28-1-xs dte-michigan text-align-left">
+                <% if( page == 0 ){ %>
+                  &lsaquo;
+                <% } else { %>
+                <a href="javascript:void(0);" id="prev" class="goToPage" data-page="<%= parseInt( page, 10 ) - 1 %>">&lsaquo;</a>
+                <% } %>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</script>
+          <!-- ************************************************************
+              END - Switch Account Model Template
+        ************************************************************ -->
+ <!-- ************************************************************
+            START - Mobile Balance Widget Template
+      ************************************************************ -->
+       
+        <!-- ************************************************************
+            END - Mobile Balance Widget Template
+      ************************************************************ -->
+
+
+      <!-- ************************************************************
+          START - Invoice Line Items Template
+    ************************************************************ -->
+      
+      <!-- ************************************************************
+          END - Invoice Line Items Template
+    ************************************************************ -->
+</div>
+
+<!-- scripts required for current bill -->
+
+
+
+
+             </div>
+         </div>
+     </div>
+    <script type="text/javascript"
+src='https://www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1","packages":["corechart","controls","table","bar"]}]}'></script>
+    <script src="../../gas_energy_intranet/js/multipleAcc.js"></script>
+    <script src="../../gas_energy_intranet/js/billCompare.js"></script>
+    <script src="../../gas_energy_intranet/js/contextualInfo.js"></script>
+    <script src="../../gas_energy_intranet/js/animation.js"></script>
+    <script src="../../gas_energy_intranet/js/jQuery.billingCyclePictograph.js"></script>
+  </body>
+</html>

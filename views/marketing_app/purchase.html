@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<% include marketing_app_layout.html %>	
+  </head>
+  <body>
+  	<input type="hidden" id="refreshed" value="no">
+  	<% include ../portfolio_header.html %>
+	<div id="nh_header" class="center-950px-block  container_WDT960PX PADDL0 no-padding-left no-padding-right page ">	
+		<div class="rootDiv panel " style=" background-color: transparent;" >		
+		<!-- START - HEADER SECTION -->
+			<% include marketing_app_header.html %>
+		<!-- END - HEADER SECTION -->
+			<div id="nh_show" class="main_container  top_67 vendor" >
+				<div class="purchase-section animated slideInRight">
+					<h1>Purchase Order</h1>
+					<div id="purchase_section">
+						<div class="row">
+							<span class="col-sm-5 col-xs-4 PADDT10PX">Vendor</span>
+							<span class="col-sm-7 col-xs-8">
+								<select>
+									<option>Choose Vendor</option>
+									<option>Option - 1</option>
+									<option>Option - 2</option>
+									<option>Option - 3</option>
+								</select>
+							</span>	
+						</div>
+						<div class="row">
+							<span class="col-sm-5 col-xs-4 PADDT10PX">PO Desc.</span>
+							<span class="col-sm-7 col-xs-8">
+								<input type="text" />
+							</span>	
+						</div>
+						<div class="row">
+							<span class="col-sm-5 col-xs-4 PADDT10PX">PO Date</span>
+							<span class="col-sm-7 col-xs-8">
+								<input type="text" />
+							</span>	
+						</div>
+						<div class="row">
+							<span class="col-sm-5 col-xs-4 PADDT10PX">Del. Date</span>
+							<span class="col-sm-7 col-xs-8">
+								<input type="text" />
+							</span>	
+						</div>
+						<div class="row">
+							<span class="col-sm-5 col-xs-4 PADDT10PX">Order Value</span>
+							<span class="col-sm-7 col-xs-8">
+								<input type="text" />
+							</span>	
+						</div>
+						<div class="row">
+							<span class="col-sm-5 col-xs-4 PADDT10PX">Order Curr.</span>
+							<span class="col-sm-7 col-xs-8">
+								<select>
+									<option>Choose</option>
+									<option>Option - 1</option>
+									<option>Option - 2</option>
+									<option>Option - 3</option>
+								</select>
+							</span>	
+						</div>
+						<div class="row">
+							<span class="col-sm-5 col-xs-4 PADDT10PX">Payment Terms</span>
+							<span class="col-sm-7 col-xs-8">
+								<select>
+									<option>Choose</option>
+									<option>Option - 1</option>
+									<option>Option - 2</option>
+									<option>Option - 3</option>
+								</select>
+							</span>	
+						</div>
+						<span class="text-center showcontent">
+							<a href="#" class=""><input type="button" value="Next" class="button" id="next"/></a>
+						</span>
+					</div>	
+				</div>
+				<div class="purchase-section animated" id="purchase_section1">
+					<div class="row">
+						<span class="col-sm-5 col-xs-4 PADDT10PX">Material</span>
+						<span class="col-sm-7 col-xs-8">
+							<select>
+								<option>Choose Material</option>
+								<option>Option - 1</option>
+								<option>Option - 2</option>
+								<option>Option - 3</option>
+							</select>
+						</span>	
+					</div>
+					<div class="row">
+						<span class="col-sm-5 col-xs-4 PADDT10PX">Desc.</span>
+						<span class="col-sm-7 col-xs-8">
+							<input type="text" />
+						</span>	
+					</div>
+					<div class="row">
+						<span class="col-sm-5 col-xs-4 PADDT10PX">Quantity</span>
+						<span class="col-sm-7 col-xs-8">
+							<input type="text" />
+						</span>	
+					</div>					
+					<div class="row">
+						<span class="col-sm-5 col-xs-4 PADDT10PX">UoM</span>
+						<span class="col-sm-7 col-xs-8">
+							<select>
+								<option>Choose</option>
+								<option>Option - 1</option>
+								<option>Option - 2</option>
+								<option>Option - 3</option>
+							</select>
+						</span>	
+					</div>
+					<div class="row">
+						<span class="col-sm-5 col-xs-4 PADDT10PX">Net Price</span>
+						<span class="col-sm-7 col-xs-8">
+							<input type="text" />
+						</span>	
+					</div>
+					<div class="row">
+						<span class="col-sm-5 col-xs-4 PADDT10PX">Net Current.</span>
+						<span class="col-sm-7 col-xs-8">
+							<select>
+								<option>Choose</option>
+								<option>Option - 1</option>
+								<option>Option - 2</option>
+								<option>Option - 3</option>
+							</select>
+						</span>	
+					</div>
+					<span class="text-center showcontent">
+						<a href="#" class=""><input type="button" value="Submit" class="button" id="submit"/></a>
+					</span>
+				</div>
+			</div>
+			</div>			
+		</div>
+	</div>
+	<!-- START -- Footer Secion -->
+		
+	<div class="footer">	
+		<div class="footer_container">						
+			<div>
+				<p class="copy_right"><a href="http://saptalabs.com/" target="_blank">&nbsp;Insecticides (India) Ltd&nbsp;</a><span> &#169;&nbsp; <script type"text/javascript">document.write(new Date().getFullYear());</script></span></p>
+				<div class="icons">
+					<ul>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="facbk flipper"></span></a></li>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="ld flipper"></span></a></li>
+						<li class="social-icons flip-container"><a href="#" target="_blank"><span class="tw flipper"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+			<!-- END -- Footer Secion -->
+    <script>
+		(function($){
+			(function fadeNext(collection){
+				collection.eq(0).fadeIn(100, function(){
+					(collection=collection.slice(1)).length 
+					&& fadeNext(collection)
+				});
+			})($('.signup_model_animtn'))
+		})(jQuery)
+	</script>
+	<script>
+		$(document).ready(function(){
+			$("#next").click(function(){
+				$("#purchase_section1").addClass("showcontent slideInRight");
+				$("#purchase_section1").removeClass("slideInLeft");
+				$("#purchase_section").addClass("hidecontent");
+				<!-- $(".content_section")addClass("hidecontent"); -->
+			});
+			$("#previous").click(function(){
+				$("#fuel").removeClass("showcontent slideInRight");
+				$("#operator").removeClass("hidecontent");
+				$("#operator").addClass("slideInLeft");
+			});
+			$("#submit").click(function(){
+				location.reload();
+			});
+		});
+	</script>
+	<script>
+	$(document).ready(function(){
+		$("#nav-mobile").html($("#nav-main").html());
+		$("#nav-trigger span").click(function(){
+			if ($("nav#nav-mobile ul").hasClass("expanded")) {
+				$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+				$(this).removeClass("open");
+			} else {
+				$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+				$(this).addClass("open");
+			}
+		});
+	});
+	</script>  
+</body>
+</html>
