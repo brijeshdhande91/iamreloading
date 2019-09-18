@@ -9,8 +9,8 @@ exports.sendMail = function sendMail(request, callback) {
 	var transporter = nodemailer.createTransport(smtpTransport({
 	    service: 'gmail',
 	    auth: {
-	        user: 'brijesh.winni@gmail.com', // my mail
-	        pass: 'chhaya03-07'
+	        user: 'xxxxxx@gmail.com', // my mail
+	        pass: 'xxxxx'
 	    }
 	}));
 	
@@ -18,7 +18,7 @@ exports.sendMail = function sendMail(request, callback) {
 
 	if(request.type === 'register'){
 		var mailOptions = {
-		    from: 'brijesh.winni@gmail.com', // sender address 
+		    from: 'xxxxx@gmail.com', // sender address 
 		    to: request.email, // list of receivers 
 		    subject: ' Portfolio', // Subject line 
 		    text: '', // plaintext body 
@@ -26,7 +26,7 @@ exports.sendMail = function sendMail(request, callback) {
 		};
 	}else if(request.type === 'forgotPassword'){
 		var mailOptions = {
-	    from: 'brijesh.winni@gmail.com', // sender address 
+	    from: 'xxxxx@gmail.com', // sender address 
 	    to: request.email, // list of receivers
 	    subject: ' Portfolio', // Subject line 
 	    text: '', // plaintext body 
@@ -34,8 +34,8 @@ exports.sendMail = function sendMail(request, callback) {
 		};
 	}else{
 		var mailOptions = {
-	    from: 'brijesh.winni@gmail.com', // sender address 
-	    to: 'brijeshdhande@yahoo.in',
+	    from: 'xxxxx@gmail.com', // sender address 
+	    to: 'xxxxxxx@yahoo.in',
 	   	cc: '',
 	    subject: ' Portfolio', // Subject line 
 	    text: '', // plaintext body 
